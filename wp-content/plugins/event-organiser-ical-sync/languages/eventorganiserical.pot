@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: event-organiser-ical-sync 2.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-25 22:04+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: event-organiser-ical-sync.php:96
+msgid "View feeds"
+msgstr ""
+
+#: event-organiser-ical-sync.php:97 event-organiser-ical-sync.php:234
+msgid "Add New Feed"
+msgstr ""
+
+#: event-organiser-ical-sync.php:98
+msgid "Add Feed"
+msgstr ""
+
+#: event-organiser-ical-sync.php:99
+msgid "Edit Feed"
+msgstr ""
+
+#: event-organiser-ical-sync.php:100 event-organiser-ical-sync.php:436
+msgid "Update Feed"
+msgstr ""
+
+#: event-organiser-ical-sync.php:104
+msgid "ICAL Feed"
+msgstr ""
+
+#: event-organiser-ical-sync.php:151
+msgid "ICAL Feeds"
+msgstr ""
+
+#: event-organiser-ical-sync.php:161 event-organiser-ical-sync.php:239
+msgid "Name"
+msgstr ""
+
+#: event-organiser-ical-sync.php:165
+msgid "Source"
+msgstr ""
+
+#: event-organiser-ical-sync.php:169
+msgid "Last Fetched"
+msgstr ""
+
+#: event-organiser-ical-sync.php:172
+msgid "Events"
+msgstr ""
+
+#: event-organiser-ical-sync.php:185
+msgid "No feeds"
+msgstr ""
+
+#: event-organiser-ical-sync.php:196
+msgid "Sync schedule:"
+msgstr ""
+
+#: event-organiser-ical-sync.php:207
+msgid "Update feed settings"
+msgstr ""
+
+#: event-organiser-ical-sync.php:219
+#, php-format
+msgid "Next feed sync is scheduled for %s"
+msgstr ""
+
+#: event-organiser-ical-sync.php:250
+msgid "Show advanced options"
+msgstr ""
+
+#: event-organiser-ical-sync.php:253
+msgid "Hide advanced options"
+msgstr ""
+
+#: event-organiser-ical-sync.php:259 event-organiser-ical-sync.php:387
+msgid "Assign events to"
+msgstr ""
+
+#: event-organiser-ical-sync.php:268
+msgid "Assign events to category"
+msgstr ""
+
+#: event-organiser-ical-sync.php:270 event-organiser-ical-sync.php:400
+msgid "Use category specified in feed"
+msgstr ""
+
+#: event-organiser-ical-sync.php:280
+msgid "Event status"
+msgstr ""
+
+#: event-organiser-ical-sync.php:286 event-organiser-ical-sync.php:421
+msgid "Use status specified in feed"
+msgstr ""
+
+#: event-organiser-ical-sync.php:296
+msgid "Add new feed"
+msgstr ""
+
+#: event-organiser-ical-sync.php:334
+msgid "Delete"
+msgstr ""
+
+#: event-organiser-ical-sync.php:339
+msgid "Fetch now"
+msgstr ""
+
+#: event-organiser-ical-sync.php:358 event-organiser-ical-sync.php:536
+#, php-format
+msgid "%s ago"
+msgstr ""
+
+#: event-organiser-ical-sync.php:397
+msgid "Category"
+msgstr ""
+
+#: event-organiser-ical-sync.php:413
+msgid "Event Status"
+msgstr ""
+
+#: ical-functions.php:158
+msgid "Sync off"
+msgstr ""
+
+#: ical-functions.php:242
+msgid "No source detected"
+msgstr ""
