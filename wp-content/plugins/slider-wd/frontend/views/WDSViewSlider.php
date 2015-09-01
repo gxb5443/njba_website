@@ -26,7 +26,7 @@ class WDSViewSlider {
     require_once(WD_S_DIR . '/framework/WDW_S_Library.php');
     $slider_row = $this->model->get_slider_row_data($id);
     if (!$slider_row) {
-      echo WDW_S_Library::message(__('There is no slider selected or the slider was deleted.', 'wds'), 'error');
+      echo WDW_S_Library::message(__('There is no slider selected or the slider was deleted.', 'wds'), 'wd_error');
       return;
     }
     if (!$slider_row->published) {
@@ -43,7 +43,7 @@ class WDSViewSlider {
 
     $slide_rows = $this->model->get_slide_rows_data($id);
     if (!$slide_rows) {
-      echo WDW_S_Library::message(__('There are no slides in this slider.', 'wds'), 'error');
+      echo WDW_S_Library::message(__('There are no slides in this slider.', 'wds'), 'wd_error');
       return;
     }
 
@@ -830,7 +830,7 @@ class WDSViewSlider {
                                              top: <?php echo $top_percent; ?>%;
                                              z-index: <?php echo $layer->depth; ?>;
                                              color: #<?php echo $layer->color; ?>;
-                                             font-family: <?php echo $layer->ffamily; ?>;
+                                             font-family: <?php echo str_replace('+', ' ', $layer->ffamily); ?>;
                                              font-weight: <?php echo $layer->fweight; ?>;
                                              background-color: <?php echo WDW_S_Library::spider_hex2rgba($layer->fbgcolor, (100 - $layer->transparent) / 100); ?>;
                                              border: <?php echo $layer->border_width; ?>px <?php echo $layer->border_style; ?> #<?php echo $layer->border_color; ?>;
@@ -1820,6 +1820,11 @@ class WDSViewSlider {
             wds_set_layer_effect_out_<?php echo $wds; ?>(i, <?php echo $start_slide_num; ?>);
           }
         }
+        jQuery(".wds_slideshow_filmstrip_<?php echo $wds; ?>").hover(function() {
+          jQuery(".wds_slideshow_filmstrip_left_<?php echo $wds; ?> i, .wds_slideshow_filmstrip_right_<?php echo $wds; ?> i").animate({opacity: 1, filter: "Alpha(opacity=100)"}, 700, "swing");
+        }, function () {
+          jQuery(".wds_slideshow_filmstrip_left_<?php echo $wds; ?> i, .wds_slideshow_filmstrip_right_<?php echo $wds; ?> i").animate({opacity: 0, filter: "Alpha(opacity=0)"}, 700, "swing");
+        });
       }
 	    function wds_stop_animation_<?php echo $wds; ?>() {
         window.clearInterval(wds_playInterval_<?php echo $wds; ?>);

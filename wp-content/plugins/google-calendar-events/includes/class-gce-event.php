@@ -195,9 +195,17 @@ class GCE_Event {
 
 		//If link should be displayed add to $markup
 		if ( ! empty( $display_options['display_link'] ) ) {
+
 			$target = ( ! empty( $display_options['display_link_target'] ) ? 'target="blank"' : '' );
 
-			$ctz  = get_option( 'timezone_string' );
+			$ctz = gce_get_wp_timezone();
+
+			if ( isset( $this->feed->id ) ) {
+				$tz_option = esc_attr( get_post_meta( $this->feed->id, '_feed_timezone_setting', true ) );
+				if ( 'use_calendar' == $tz_option ) {
+					$ctz = '';
+				}
+			}
 
 			// Check if it is a hangouts link first
 			if( strpos( $this->link, 'plus.google.com/events/' ) !== false ) {
@@ -349,34 +357,52 @@ class GCE_Event {
 				return $m[1] . $location . $m[6];
 
 			case 'description':
-				$description = esc_html( trim( $this->description ) );
 
-				//If a word limit has been set, trim the description to the required length
+				$description = trim( $this->description );
+
 				if ( 0 != $limit ) {
 					preg_match( '/([\S]+\s*){0,' . $limit . '}/', esc_html( $this->description ), $description );
 					$description = trim( $description[0] );
 				}
 
 				if ( $markdown || $html ) {
-					if ( $markdown && function_exists( 'Markdown' ) )
-						$description = Markdown( $description );
 
-					if ( $html )
-						$description = wp_kses_post( html_entity_decode( $description ) );
-				}else{
-					//Otherwise, preserve line breaks
-					$description = nl2br( $description );
-
-					//Make URLs clickable if required
-					if ( $autolink )
+					if ( $autolink ) {
 						$description = make_clickable( $description );
+					}
+
+					if ( $markdown && function_exists( 'Markdown' ) ) {
+						$description = Markdown( $description );
+					}
+
+					if ( $html ) {
+						$description = wp_kses_post( $description );
+					}
+
+				} else {
+
+					$description = nl2br( esc_html( $description ) );
+
+					if ( $autolink ) {
+						$description = make_clickable( $description );
+					}
+
 				}
 
 				return $m[1] . $description . $m[6];
 
 			case 'link':
+
 				$new_window = ( $newwindow ) ? ' target="_blank"' : '';
-				$ctz  = get_option( 'timezone_string' );
+
+				$ctz = gce_get_wp_timezone();
+
+				if ( isset( $this->feed->id ) ) {
+					$tz_option = esc_attr( get_post_meta( $this->feed->id, '_feed_timezone_setting', true ) );
+					if ( 'use_calendar' == $tz_option ) {
+						$ctz = '';
+					}
+				}
 
 				// Check if it is a hangouts link first
 				if( strpos( $this->link, 'plus.google.com/events/' ) !== false ) {

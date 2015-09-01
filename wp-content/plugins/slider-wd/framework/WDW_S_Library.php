@@ -43,133 +43,133 @@ class WDW_S_Library {
       switch($message_id) {
         case 1: {
           $message = 'Item Succesfully Saved.';
-          $type = 'updated';
+          $type = 'wd_updated';
           break;
 
         }
         case 2: {
           $message = 'Error. Please install plugin again.';
-          $type = 'error';
+          $type = 'wd_error';
           break;
 
         }
         case 3: {
           $message = 'Item Succesfully Deleted.';
-          $type = 'updated';
+          $type = 'wd_updated';
           break;
 
         }
         case 4: {
           $message = "You can't delete default theme";
-          $type = 'error';
+          $type = 'wd_error';
           break;
 
         }
         case 5: {
           $message = 'Items Succesfully Deleted.';
-          $type = 'updated';
+          $type = 'wd_updated';
           break;
 
         }
         case 6: {
           $message = 'You must select at least one item.';
-          $type = 'error';
+          $type = 'wd_error';
           break;
 
         }
         case 7: {
           $message = 'The item is successfully set as default.';
-          $type = 'updated';
+          $type = 'wd_updated';
           break;
 
         }
         case 8: {
           $message = 'Options Succesfully Saved.';
-          $type = 'updated';
+          $type = 'wd_updated';
           break;
 
         }
         case 9: {
           $message = 'Item Succesfully Published.';
-          $type = 'updated';
+          $type = 'wd_updated';
           break;
 
         }
         case 10: {
           $message = 'Items Succesfully Published.';
-          $type = 'updated';
+          $type = 'wd_updated';
           break;
 
         }
         case 11: {
           $message = 'Item Succesfully Unpublished.';
-          $type = 'updated';
+          $type = 'wd_updated';
           break;
 
         }
         case 12: {
           $message = 'Items Succesfully Unpublished.';
-          $type = 'updated';
+          $type = 'wd_updated';
           break;
 
         }
         case 13: {
           $message = 'Ordering Succesfully Saved.';
-          $type = 'updated';
+          $type = 'wd_updated';
           break;
 
         }
         case 14: {
           $message = 'A term with the name provided already exists.';
-          $type = 'error';
+          $type = 'wd_error';
           break;
 
         }
         case 15: {
           $message = 'Name field is required.';
-          $type = 'error';
+          $type = 'wd_error';
           break;
 
         }
         case 16: {
           $message = 'The slug must be unique.';
-          $type = 'error';
+          $type = 'wd_error';
           break;
 
         }
         case 17: {
           $message = 'Changes must be saved.';
-          $type = 'error';
+          $type = 'wd_error';
           break;
 
         }
         case 18: {
           $message = 'You must set watermark type.';
-          $type = 'error';
+          $type = 'wd_error';
           break;
 
         }
         case 19: {
           $message = 'Watermark Succesfully Set.';
-          $type = 'updated';
+          $type = 'wd_updated';
           break;
 
         }
         case 20: {
           $message = 'Watermark Succesfully Reset.';
-          $type = 'updated';
+          $type = 'wd_updated';
           break;
 
         }
         case 21: {
           $message = 'Settings Succesfully Reset.';
-          $type = 'updated';
+          $type = 'wd_updated';
           break;
 
         }
         default: {
           $message = '';
-          $type = 'error';
+          $type = 'wd_error';
           break;
         }
       }

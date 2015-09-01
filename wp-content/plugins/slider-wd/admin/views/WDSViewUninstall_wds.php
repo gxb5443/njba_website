@@ -89,7 +89,7 @@ class WDSViewUninstall_wds {
     $deactivate_url = add_query_arg(array('action' => 'deactivate', 'plugin' => 'slider-wd/slider-wd.php'), admin_url('plugins.php'));
     $deactivate_url = wp_nonce_url($deactivate_url, 'deactivate-plugin_slider-wd/slider-wd.php');
     ?>
-    <div id="message" class="updated fade">
+    <div id="message" class="wd_updated fade">
       <p>The following Database Tables successfully deleted:</p>
       <p><?php echo $prefix; ?>wdsslider,</p>
       <p><?php echo $prefix; ?>wdsslide,</p>
@@ -98,7 +98,7 @@ class WDSViewUninstall_wds {
     <?php
     if (isset($_POST['bwg_delete_files'])) {
     ?>
-    <div class="<?php echo ($flag) ? 'updated' : 'error'?>">
+    <div class="<?php echo ($flag) ? 'wd_updated' : 'wp_error'?>">
       <p><?php echo ($flag) ? 'The folder was successfully deleted.' : 'An error occurred when deleting the folder.'?></p>
     </div>
     <?php

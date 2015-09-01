@@ -428,7 +428,7 @@ class WDSControllerSliders_wds {
 		$hotp_border_color = ((isset($params_array['hotp_border_color'])) ? esc_html(stripslashes($params_array['hotp_border_color'])) : '');
 		$hotp_border_radius = ((isset($params_array['hotp_border_radius'])) ? esc_html(stripslashes($params_array['hotp_border_radius'])) : '');
         $hotp_text_position = ((isset($params_array['hotp_text_position'])) ? esc_html(stripslashes($params_array['hotp_text_position'])) : '');
-		
+    $google_fonts = ((isset($params_array['google_fonts'])) ? esc_html(stripslashes($params_array['google_fonts'])) : 0);
         if ($title) {
           if (strpos($layer_id, 'pr_') !== FALSE) {
             $save = $wpdb->insert($wpdb->prefix . 'wdslayer', array(
@@ -475,6 +475,7 @@ class WDSControllerSliders_wds {
 			  'hotp_border_color' => $hotp_border_color,
 			  'hotp_border_radius' => $hotp_border_radius,
 			  'hotp_text_position' => $hotp_text_position,
+        'google_fonts' => $google_fonts,
             ));
           }
           else {
@@ -521,6 +522,7 @@ class WDSControllerSliders_wds {
 			  'hotp_border_color' => $hotp_border_color,
 			  'hotp_border_radius' => $hotp_border_radius,
               'hotp_text_position' => $hotp_text_position,
+              'google_fonts' => $google_fonts,
             ), array('id' => $layer_id));
           }
         }
@@ -627,7 +629,7 @@ class WDSControllerSliders_wds {
 
     require_once WD_S_DIR . "/admin/views/WDSViewSliders_wds.php";
     $view = new WDSViewSliders_wds($model);
-    echo WDW_S_Library::message('Changes must be saved.', 'error');
+    echo WDW_S_Library::message('Changes must be saved.', 'wd_error');
     $view->edit($slider_id, TRUE);
   }
   public function duplicate() {
@@ -637,7 +639,7 @@ class WDSControllerSliders_wds {
     $model = new WDSModelSliders_wds();
     require_once WD_S_DIR . "/admin/views/WDSViewSliders_wds.php";
     $view = new WDSViewSliders_wds($model);
-    echo WDW_S_Library::message('Item Succesfully Duplicated.', 'updated');
+    echo WDW_S_Library::message('Item Succesfully Duplicated.', 'wd_updated');
     $view->edit($new_slider_id);
   }
 
@@ -649,7 +651,7 @@ class WDSControllerSliders_wds {
         $this->duplicate_tabels($slider_id);
       }
     }
-    echo WDW_S_Library::message('Items Succesfully Duplicated.', 'updated');
+    echo WDW_S_Library::message('Items Succesfully Duplicated.', 'wd_updated');
     $this->display();
   }
 
@@ -917,6 +919,7 @@ class WDSControllerSliders_wds {
 			          'hotp_border_color' => $layer_id->hotp_border_color,
 			          'hotp_border_radius' => $layer_id->hotp_border_radius,
                 'hotp_text_position' => $layer_id->hotp_text_position,
+                'google_fonts' => $layer_id->google_fonts,
               ));
                          
             }
@@ -1108,10 +1111,10 @@ class WDSControllerSliders_wds {
     if ($wpdb->query($query)) {
       $query_image = $wpdb->prepare('DELETE t1.*, t2.* FROM ' . $wpdb->prefix . 'wdsslide as t1 LEFT JOIN ' . $wpdb->prefix . 'wdslayer as t2 ON t1.id=t2.slide_id WHERE t1.slider_id="%d"', $id);
       $wpdb->query($query_image);
-      echo WDW_S_Library::message('Item Succesfully Deleted.', 'updated');
+      echo WDW_S_Library::message('Item Succesfully Deleted.', 'wd_updated');
     }
     else {
-      echo WDW_S_Library::message('Error. Please install plugin again.', 'error');
+      echo WDW_S_Library::message('Error. Please install plugin again.', 'wd_error');
     }
     $this->display();
   }
@@ -1130,10 +1133,10 @@ class WDSControllerSliders_wds {
       }
     }
     if ($flag) {
-      echo WDW_S_Library::message('Items Succesfully Deleted.', 'updated');
+      echo WDW_S_Library::message('Items Succesfully Deleted.', 'wd_updated');
     }
     else {
-      echo WDW_S_Library::message('You must select at least one item.', 'error');
+      echo WDW_S_Library::message('You must select at least one item.', 'wd_error');
     }
     $this->display();
   }
@@ -1142,10 +1145,10 @@ class WDSControllerSliders_wds {
     global $wpdb;
     $save = $wpdb->update($wpdb->prefix . 'wdsslider', array('published' => 1), array('id' => $id));
     if ($save !== FALSE) {
-      echo WDW_S_Library::message('Item Succesfully Published.', 'updated');
+      echo WDW_S_Library::message('Item Succesfully Published.', 'wd_updated');
     }
     else {
-      echo WDW_S_Library::message('Error. Please install plugin again.', 'error');
+      echo WDW_S_Library::message('Error. Please install plugin again.', 'wd_error');
     }
     $this->display();
   }
@@ -1167,10 +1170,10 @@ class WDSControllerSliders_wds {
       }
     }
     if ($flag) {
-      echo WDW_S_Library::message('Items Succesfully Published.', 'updated');
+      echo WDW_S_Library::message('Items Succesfully Published.', 'wd_updated');
     }
     else {
-      echo WDW_S_Library::message('You must select at least one item.', 'error');
+      echo WDW_S_Library::message('You must select at least one item.', 'wd_error');
     }
     $this->display();
   }
@@ -1182,7 +1185,7 @@ class WDSControllerSliders_wds {
       echo WDW_S_Library::message('Item Succesfully Unpublished.', 'updated');
     }
     else {
-      echo WDW_S_Library::message('Error. Please install plugin again.', 'error');
+      echo WDW_S_Library::message('Error. Please install plugin again.', 'wd_error');
     }
     $this->display();
   }
@@ -1204,10 +1207,10 @@ class WDSControllerSliders_wds {
       }
     }
     if ($flag) {
-      echo WDW_S_Library::message('Items Succesfully Unpublished.', 'updated');
+      echo WDW_S_Library::message('Items Succesfully Unpublished.', 'wd_updated');
     }
     else {
-      echo WDW_S_Library::message('You must select at least one item.', 'error');
+      echo WDW_S_Library::message('You must select at least one item.', 'wd_error');
     }
     $this->display();
   }
