@@ -104,8 +104,8 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 					<div class="event-meta-block animate-onscroll">
 						
 						<i class="icons icon-calendar"></i>
-						<p class="title"><?php _e( 'Start Date - End Date', THEMENAME ) ?></p>
-						<p><?php echo $start_date;  ?> - <?php echo $end_date;  ?></p>
+						<p class="title"><?php _e( 'Date', THEMENAME ) ?></p>
+						<p><?php echo $start_date;  ?></p>
 						
 					</div>
 					
