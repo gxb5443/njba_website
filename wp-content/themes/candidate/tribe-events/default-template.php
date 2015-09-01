@@ -33,10 +33,10 @@ get_header();
 			<!-- Page Heading -->
 
 					<?php 
-					if( $type_event && $type_event == 'style1' ) {
+					if( $type_event == 'style1' || $type_event == 'style12' ) {
 					?>
 					<!-- Event Map -->
-					<section class="section full-width full-width-map animate-onscroll">
+					<section class=" <?php if( $type_event == 'style1' ) { echo ' section full-width full-width-map '; } ?> animate-onscroll">
 					
 					
 					<?php if( tribe_embed_google_map( get_the_ID() ) ) : ?>
@@ -66,7 +66,7 @@ get_header();
 			<!-- Page Heading -->
 			<section class="section page-heading animate-onscroll">
 				<h1><?php _e( 'Events', THEMENAME ); ?></h1>
-				<p class="breadcrumb"><a href="<?php echo home_url('/'); ?>">Home</a> / Events</p>
+				<p class="breadcrumb"><a href="<?php echo home_url('/'); ?>"><?php _e( 'Home', THEMENAME ); ?></a> / <?php _e( 'Events', THEMENAME ); ?></p>
 			</section>
 			<!-- Page Heading -->
 
@@ -104,7 +104,7 @@ get_header();
 				<div class="row related-events">
 					
 					<div class="col-lg-12 col-md-12 col-sm-12 animate-onscroll">
-						<h3><?php _e( 'Related Events', 'tribe-events-calendar' ) ?></h3>
+						<h3><?php _e( 'Related Events', THEMENAME ) ?></h3>
 					</div>
 		
 					<!-- Related Articles -->

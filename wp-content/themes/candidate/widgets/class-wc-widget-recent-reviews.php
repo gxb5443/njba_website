@@ -18,14 +18,14 @@ class Candidat_WC_Widget_Recent_Reviews extends WC_Widget {
 	 */
 	public function __construct() {
 		$this->widget_cssclass    = 'woocommerce widget_recent_reviews';
-		$this->widget_description = __( 'Display a list of your most recent reviews on your site.', 'woocommerce' );
+		$this->widget_description = __( 'Display a list of your most recent reviews on your site.', THEMENAME );
 		$this->widget_id          = 'woocommerce_recent_reviews';
-		$this->widget_name        = __( 'WooCommerce Recent Reviews', 'woocommerce' );
+		$this->widget_name        = __( 'WooCommerce Recent Reviews', THEMENAME );
 		$this->settings           = array(
 			'title'  => array(
 				'type'  => 'text',
-				'std'   => __( 'Recent Reviews', 'woocommerce' ),
-				'label' => __( 'Title', 'woocommerce' )
+				'std'   => __( 'Recent Reviews', THEMENAME ),
+				'label' => __( 'Title', THEMENAME )
 			),
 			'number' => array(
 				'type'  => 'number',
@@ -33,7 +33,7 @@ class Candidat_WC_Widget_Recent_Reviews extends WC_Widget {
 				'min'   => 1,
 				'max'   => '',
 				'std'   => 10,
-				'label' => __( 'Number of reviews to show', 'woocommerce' )
+				'label' => __( 'Number of reviews to show', THEMENAME )
 			)
 		);
 		parent::__construct();
@@ -81,7 +81,7 @@ class Candidat_WC_Widget_Recent_Reviews extends WC_Widget {
 					<div class="shop-item-content">
 						<h6><a href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '"  >'. $_product->get_title() .'</a></h6>';
 
-				printf( '<span class="price reviewer">' . _x( 'by %1$s', 'by comment author', 'woocommerce' ) . '</span>', get_comment_author() );
+				printf( '<span class="price reviewer">' . _x( 'by %1$s', 'by comment author', THEMENAME ) . '</span>', get_comment_author() );
 				
 				echo '<div class="shop-rating read-only-small" data-score="'. esc_html( $average ) .'"></div>	
 					  </div></li>';

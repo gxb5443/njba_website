@@ -866,7 +866,7 @@ display:inline;
 
 .csstransforms3d #navigation li ul{
 	display:block;
-	width:200px;
+	min-width:200px;
 	transform: rotate3d(1,0,0,-90deg);
 	-webkit-transform: rotate3d(1,0,0,-90deg);
 	-moz-transform: rotate3d(1,0,0,-90deg);
@@ -922,7 +922,7 @@ display:inline;
 
 #navigation li:hover>ul{
 	display:block;
-	width:200px;
+	min-width:200px;
 	-moz-opacity: 1;
 	-khtml-opacity: 1;
 	opacity: 1;
@@ -9885,6 +9885,51 @@ body #map-canvas img {
 	border-top:1px solid #98711F;
 	border-bottom:1px solid #98711F;
 }
+
+
+
+footer .menu li a{
+	max-height: 23px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+table.tribe-events-tickets td {
+  text-align: center;
+  }
+
+table.tribe-events-tickets td.add-to-cart {
+  text-align: left;
+  padding-left: 20px;
+  }
+
+table.tribe-events-tickets td.woocommerce {
+  text-align: left;
+  padding-left: 20px;
+  }
+body table.tribe-events-tickets {
+  margin-bottom: 25px;
+  }
+
+
+
+body.single-tribe_events .tribe-events-cal-links{
+display:none;
+}
+
+
+
+
+
+
+
+
+
 
 
 

@@ -181,6 +181,11 @@ function siteoptions_options_page(){
 					);
 		
 		
+		
+	
+		
+		
+		
 		$options[] = array( "name" => "",
 					"type" => "info",
 					"std" => '<h4 style="color:#2A2B2D;" >Customize Box</h4>',
@@ -1119,7 +1124,61 @@ function siteoptions_options_page(){
 					"std" => "#3e474c",
 					"default" => "#3e474c"
 					);
+		
+
+		$options[] = array( "name" => "Page List",
+					"type" => "select2",
+					"id" => "page_list_styles",
+					"std" => get_option('sense_page_list_styles'),
+					"options" => get_styles('normal')
+					);
+		$options[] = array( "name" => "",
+					"type" => "select3",
+					"id" => "page_list_size",
+					"std" => get_option('sense_page_list_size'),
+					"options" => get_font_size(15)
+					);
+		$options[] = array( "name" => "",
+					"type" => "select3",
+					"id" => "page_list_font",
+					"std" => get_option('sense_page_list_font'),
+					"options" => get_fonts('Open Sans')
+					);
+		$options[] = array( "name" => "",
+					"type" => "color",
+					"id" => "page_list_font_color",
+					"std" => "#3e474c",
+					"default" => "#3e474c"
+					);	
+
+
+		$options[] = array( "name" => "Newsletter text",
+					"type" => "select2",
+					"id" => "page_newsletter_styles",
+					"std" => get_option('sense_page_newsletter_styles'),
+					"options" => get_styles('normal')
+					);
+		$options[] = array( "name" => "",
+					"type" => "select3",
+					"id" => "page_newsletter_size",
+					"std" => get_option('sense_page_newsletter_size'),
+					"options" => get_font_size(14)
+					);
+		$options[] = array( "name" => "",
+					"type" => "select3",
+					"id" => "page_newsletter_font",
+					"std" => get_option('sense_page_newsletter_font'),
+					"options" => get_fonts('Open Sans')
+					);
+		$options[] = array( "name" => "",
+					"type" => "color",
+					"id" => "page_newsletter_font_color",
+					"std" => "#e2eaf2",
+					"default" => "#e2eaf2"
+					);	
+
 					
+		
 		$options[] = array( "name" => "Breadcrumb",
 					"type" => "select2",
 					"id" => "breadcrumb_styles",
@@ -1306,7 +1365,38 @@ function siteoptions_options_page(){
 					"std" => "#e2eaf2",
 					"default" => "#e2eaf2"
 					);			
-					
+			
+
+
+
+		$options[] = array( "name" => "Footer List",
+					"type" => "select2",
+					"id" => "footer_list_styles",
+					"std" => get_option('sense_footer_list_styles'),
+					"options" => get_styles('normal')
+					);
+		$options[] = array( "name" => "",
+					"type" => "select3",
+					"id" => "footer_list_size",
+					"std" => get_option('sense_footer_list_size'),
+					"options" => get_font_size(15)
+					);
+		$options[] = array( "name" => "",
+					"type" => "select3",
+					"id" => "footer_list_font",
+					"std" => get_option('sense_footer_list_font'),
+					"options" => get_fonts('Open Sans')
+					);
+		$options[] = array( "name" => "",
+					"type" => "color",
+					"id" => "footer_list_font_color",
+					"std" => "#e2eaf2",
+					"default" => "#e2eaf2"
+					);			
+
+
+
+			
 					
 		$options[] = array( "name" => "Header Text (top line)",
 					"type" => "select2",
@@ -1755,6 +1845,17 @@ function siteoptions_options_page(){
 		$options[] = array( "name" => "post", "std" => "Post",
 					"type" => "heading");
 		
+			
+		
+		$options[] = array( "name" => "Read More Text",
+					"type" => "text",
+					"id" => "more_text",
+					"id" => "more_text",
+					"std" => get_option('sense_more_text')
+					);	
+		
+		
+		
 		$options[] = array( "name" => "Show Author Post(single)",
 					"type" => "radio",
 					"id" => "show_author_single",
@@ -1775,7 +1876,16 @@ function siteoptions_options_page(){
 						)
 					);				
 					
-		
+		$options[] = array( "name" => "Sidebar on default blog",
+					"type" => "select",
+					"id" => "settings_sidebar_blog",
+					"std" => get_option('sense_settings_sidebar_blog'),
+					"options" => array(
+						"full"=>"None",
+						"left"=>"Left",
+						"right"=>"Right"
+						)
+					);
 		
 		////////////////////////////footer/////////////////////////////////////////////////////////////////////////////////////////			
 		$options[] = array( "name" => "footer", "std" => "Footer",

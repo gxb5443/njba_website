@@ -52,7 +52,7 @@ if ( !defined('ABSPATH') ) { die('-1'); }
 
 	
 
-if( $type_event && $type_event == 'style1' ) {
+if( $type_event == 'style1' || $type_event == 'style12' ) {
 $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-blog'); 	
 
 ?>
@@ -62,7 +62,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 
 	<?php while ( have_posts() ) :  the_post(); ?>
 	<!-- Event Single -->
-	<div class="event-single event-type1">
+	<div id="post-<?php the_ID(); ?>" <?php post_class('event-single event-type1'); ?> >
 		
 		<div class="row">
 			
@@ -72,9 +72,27 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 					<img src="<?php  echo $thumb_image_url[0];  ?>" alt="">
 				</div>
 				
-				<h6>Description</h6>
+				<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
+				
+				<h6><?php _e( 'Description', THEMENAME ) ?></h6>
 				
 				<?php the_content(); ?>
+				
+				
+				
+				
+				
+				<!-- .tribe-events-single-event-description -->
+					<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
+				<!-- Event meta -->
+				<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
+			
+				<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
+				
+				
+				
+				
+				<?php if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) comments_template() ?>
 				
 			</div>
 			
@@ -86,7 +104,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 					<div class="event-meta-block animate-onscroll">
 						
 						<i class="icons icon-calendar"></i>
-						<p class="title"><?php _e( 'Start Date - End Date', 'tribe-events-calendar' ) ?></p>
+						<p class="title"><?php _e( 'Start Date - End Date', THEMENAME ) ?></p>
 						<p><?php echo $start_date;  ?> - <?php echo $end_date;  ?></p>
 						
 					</div>
@@ -94,7 +112,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 					<div class="event-meta-block animate-onscroll">
 						
 						<i class="icons icon-clock"></i>
-						<p class="title"><?php _e( 'Start Time - End Time', 'tribe-events-calendar' ) ?></p>
+						<p class="title"><?php _e( 'Start Time - End Time', THEMENAME ) ?></p>
 						<p><?php esc_html_e( $start_time . $time_range_separator . $end_time, 'tribe-events-calendar' ); ?></p>
 						
 					</div>
@@ -104,7 +122,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 					<div class="event-meta-block animate-onscroll">
 						
 						<i class="icons icon-location"></i>
-						<p class="title"><?php _e( 'Event Location', 'tribe-events-calendar' ) ?></p>
+						<p class="title"><?php _e( 'Event Location', THEMENAME ) ?></p>
 						<p><?php echo $address; ?></p>
 						
 					</div>
@@ -115,7 +133,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 					<div class="event-meta-block animate-onscroll">
 						
 						<i class="icons icon-ticket"></i>
-						<p class="title"><?php _e( 'Cost', 'tribe-events-calendar' ) ?></p>
+						<p class="title"><?php _e( 'Cost', THEMENAME ) ?></p>
 						<p><?php esc_html_e( tribe_get_formatted_cost(), 'tribe-events-calendar' ) ?></p>
 						
 					</div>
@@ -130,7 +148,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 							'before' => '',
 							'sep' => ', ',
 							'after' => '',
-							'label' => __( 'Category', 'tribe-events-calendar' ), // An appropriate plural/singular label will be provided
+							'label' => __( 'Category', THEMENAME ), // An appropriate plural/singular label will be provided
 							'label_before' => '<p class="title">',
 							'label_after' => '</p>',
 							'wrap_before' => '<dd class="tribe-events-event-categories">',
@@ -144,7 +162,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 					<?php if ( tribe_meta_event_tags('', '', false) != '' ) { ?>
 					<div class="event-meta-block animate-onscroll">
 						<i class="icons icon-tags"></i>
-						<?php echo candidat_tribe_meta_event_tags1( __( 'Tags', 'tribe-events-calendar' ), ', ', false ) ?>
+						<?php echo candidat_tribe_meta_event_tags1( __( 'Tags', THEMENAME ), ', ', false ) ?>
 					</div>
 					<?php } ?>
 					
@@ -153,7 +171,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 					<div class="event-meta-block animate-onscroll">
 						
 						<i class="icons icon-user"></i>
-						<p class="title"><?php _e( 'Organizer', 'tribe-events-calendar' ) ?></p>
+						<p class="title"><?php _e( 'Organizer', THEMENAME ) ?></p>
 						<p><?php echo tribe_get_organizer() ?></p>
 						
 					</div>
@@ -165,7 +183,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 					<div class="event-meta-block animate-onscroll">
 						
 						<i class="icons icon-phone"></i>
-						<p class="title"><?php _e( 'Phone', 'tribe-events-calendar' ) ?></p>
+						<p class="title"><?php _e( 'Phone', THEMENAME ) ?></p>
 						<p><?php echo $phone ?></p>
 						
 					</div>
@@ -175,7 +193,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 					<div class="event-meta-block animate-onscroll">
 						
 						<i class="icons icon-mail-alt"></i>
-						<p class="title"><?php _e( 'Email', 'tribe-events-calendar' ) ?></p>
+						<p class="title"><?php _e( 'Email', THEMENAME ) ?></p>
 						<p><a href="mailto:<?php echo $email ?>"><?php echo $email ?></a></p>
 						
 					</div>
@@ -185,7 +203,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 					<div class="event-meta-block animate-onscroll">
 						
 						<i class="icons icon-mail-alt"></i>
-						<p class="title"><?php _e( 'Website', 'tribe-events-calendar' ) ?></p>
+						<p class="title"><?php _e( 'Website', THEMENAME ) ?></p>
 						<p><?php echo $website ?></p>
 						
 					</div>
@@ -194,7 +212,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 					<div class="event-meta-block animate-onscroll">
 						
 						<i class="icons icon-share"></i>
-						<p class="title"><?php _e( 'Share This', 'tribe-events-calendar' ) ?></p>
+						<p class="title"><?php _e( 'Share This', THEMENAME ) ?></p>
 						<ul class="social-share">
 							<li class="facebook"><a href="#" class="tooltip-ontop" title="Facebook"><i class="icons icon-facebook"></i></a></li>
 							<li class="twitter"><a href="#" class="tooltip-ontop" title="Twitter"><i class="icons icon-twitter"></i></a></li>
@@ -231,7 +249,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 							<div class="event-meta-block col-lg-3 col-md-3 col-sm-6 animate-onscroll">
 								
 								<i class="icons icon-calendar"></i>
-								<p class="title"><?php _e( 'Start Date - End Date', 'tribe-events-calendar' ) ?></p>
+								<p class="title"><?php _e( 'Start Date - End Date', THEMENAME ) ?></p>
 								<p><?php echo $start_date;  ?> - <?php echo $end_date;  ?></p>
 								
 								
@@ -240,7 +258,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 							<div class="event-meta-block col-lg-3 col-md-3 col-sm-6 animate-onscroll">
 								
 								<i class="icons icon-clock"></i>
-								<p class="title"><?php _e( 'Start Time - End Time', 'tribe-events-calendar' ) ?></p>
+								<p class="title"><?php _e( 'Start Time - End Time', THEMENAME ) ?></p>
 								<p><?php esc_html_e( $start_time . $time_range_separator . $end_time ); ?></p>
 								
 							</div>
@@ -248,7 +266,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 							<div class="event-meta-block col-lg-3 col-md-3 col-sm-6 animate-onscroll">
 								
 								<i class="icons icon-location"></i>
-								<p class="title"><?php _e( 'Event Location', 'tribe-events-calendar' ) ?></p>
+								<p class="title"><?php _e( 'Event Location', THEMENAME ) ?></p>
 								<p><?php echo $address; ?></p>
 								
 							</div>
@@ -256,7 +274,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 							<div class="event-meta-block col-lg-3 col-md-3 col-sm-6 animate-onscroll">
 								
 								<i class="icons icon-ticket"></i>
-								<p class="title"><?php _e( 'Cost', 'tribe-events-calendar' ) ?></p>
+								<p class="title"><?php _e( 'Cost', THEMENAME ) ?></p>
 								<p><?php esc_html_e( tribe_get_formatted_cost() ) ?></p>
 								
 							</div>
@@ -279,7 +297,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 							<div class="event-meta-block col-lg-3 col-md-3 col-sm-6 animate-onscroll">
 								
 								<i class="icons icon-user"></i>
-								<p class="title"><?php _e( 'Organizer', 'tribe-events-calendar' ) ?></p>
+								<p class="title"><?php _e( 'Organizer', THEMENAME ) ?></p>
 								<p><?php echo $organizer; ?></p>
 								
 							</div>
@@ -287,7 +305,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 							<div class="event-meta-block col-lg-3 col-md-3 col-sm-6 animate-onscroll">
 								
 								<i class="icons icon-phone"></i>
-								<p class="title"><?php _e( 'Phone', 'tribe-events-calendar' ) ?></p>
+								<p class="title"><?php _e( 'Phone', THEMENAME ) ?></p>
 								<p><?php echo $phone ?></p>
 								
 							</div>
@@ -295,7 +313,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 							<div class="event-meta-block col-lg-3 col-md-3 col-sm-6 animate-onscroll">
 								
 								<i class="icons icon-mail-alt"></i>
-								<p class="title"><?php _e( 'Email', 'tribe-events-calendar' ) ?></p>
+								<p class="title"><?php _e( 'Email', THEMENAME ) ?></p>
 								<p><a href="mailto:<?php echo $email ?>"><?php echo $email ?></a></p>
 								
 							</div>
@@ -303,7 +321,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 							<div class="event-meta-block col-lg-3 col-md-3 col-sm-6 animate-onscroll">
 								
 								<i class="icons icon-globe"></i>
-								<p class="title"><?php _e( 'Website', 'tribe-events-calendar' ) ?></p>
+								<p class="title"><?php _e( 'Website', THEMENAME ) ?></p>
 								<p><?php echo $website ?></p>
 								
 							</div>
@@ -316,7 +334,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 							
 							<div class="col-lg-4 col-md-4 col-sm-6 animate-onscroll">
 								
-								<h6><?php _e( 'Event Details', 'tribe-events-calendar' ) ?></h6>
+								<h6><?php _e( 'Event Details', THEMENAME ) ?></h6>
 								
 								<table class="project-details">
 							
@@ -326,7 +344,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 										'before' => '',
 										'sep' => ', ',
 										'after' => '',
-										'label' => __( 'Category:', 'tribe-events-calendar' ), 
+										'label' => __( 'Category:', THEMENAME ), 
 										'label_before' => '<td>',
 										'label_after' => '</td>',
 										'wrap_before' => '<td>',
@@ -336,11 +354,11 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 									</tr>
 									
 									<tr>
-										<?php echo candidat_tribe_meta_event_tags2( __( 'Tags:', 'tribe-events-calendar' ), ', ', false ) ?>
+										<?php echo candidat_tribe_meta_event_tags2( __( 'Tags:', THEMENAME ), ', ', false ) ?>
 									</tr>
 									
 									<tr>
-										<td><?php _e( 'Share this', 'tribe-events-calendar' ) ?>:</td>
+										<td><?php _e( 'Share this', THEMENAME ) ?>:</td>
 										<td>
 											<ul class="social-share">
 												<li class="facebook"><a href="#" class="tooltip-ontop" title="Facebook"><i class="icons icon-facebook"></i></a></li>
@@ -358,11 +376,31 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 							
 							<div class="col-lg-8 col-md-8 col-sm-6 animate-onscroll">
 								
-								<h6><?php _e( 'Description', 'tribe-events-calendar' ) ?></h6>
+								<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
+								
+								<h6><?php _e( 'Description', THEMENAME ) ?></h6>
 						
 								<?php the_content(); ?>
 								
+								
+							
+							
+							<!-- .tribe-events-single-event-description -->
+								<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
+							<!-- Event meta -->
+							<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
+											
+							<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
+							
+							<?php if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) comments_template() ?>
+							
 							</div>
+							
+							
+							
+							
+							
+							
 							
 						</div>
 						
@@ -387,7 +425,7 @@ $thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-b
 		</div>
 		
 		<div class="col-lg-4 col-md-4 col-sm-4 align-center animate-onscroll">
-			<a href="<?php echo tribe_get_events_link() ?>" class="button big"><?php _e( 'All events', 'tribe-events-calendar' ) ?></a>
+			<a href="<?php echo tribe_get_events_link() ?>" class="button big"><?php _e( 'All events', THEMENAME ) ?></a>
 		</div>
 		
 		<div class="col-lg-4 col-md-4 col-sm-4 align-right animate-onscroll">

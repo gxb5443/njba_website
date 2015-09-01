@@ -234,14 +234,14 @@ function candidate_css_loader() {
 	echo ".newsletter-form .newsletter-submit:hover .icons, .newsletter-form .newsletter-submit:hover input, body .image-banner:hover a  { background: " . get_option('sense_submit_newsletter_hover_color') . " !important; }";
 	
 	echo "body .increase-button, body .decrease-button, body .post-side-meta .post-format, body .banner, body a.button, body button,  body .owl-header .carousel-arrows span, body .banner-rotator-flexslider .flex-control-nav li a.flex-active, body #button-to-top, body .issue-block:hover, body .filter-dropdown>li>span, body #tribe-events-content .tribe-events-calendar th, body .event-meta-block, body .media-format>div, body input[type='submit'], body input[type='reset'], body .tab-header li, body .accordion-header, body .dropcap.squared, body .cart-button, body input.minus, body input.plus, body a.tag { background: " . get_option('sense_accent5_color') . "; }";
-	echo "body #bbpress-forums ul.chosen-results li.highlighted, body .increase-button:hover, body .decrease-button:hover, body .numeric-pagination span, body .event-item:hover .date>span, body .banner:hover, body .owl-header .carousel-arrows span:hover, body a.button:hover, body button:hover, body a.button.active-button, body button.active-button, body .banner-rotator-content, body .image-banner a, body .flex-direction-nav a:hover, body #button-to-top:hover, body .post-side-meta .post-format:hover, body .issue-icon, body .chosen-container .chosen-results li.highlighted, body .dropcap.squared.blue, body #content .section.full-width-bg .most-popular .pricing-header, body .shopping-cart:hover .cart-button, body .shop-product-gallery .fullscreen-icon:hover, body input.minus:hover, body input.plus:hover, body .upcoming-events>li:hover .date>span, body a.tag:hover { background: " . get_option('sense_accent1_color') . "; }";
+	echo "body .wpb_images_carousel .vc_images_carousel .vc_carousel-control:hover,  body #bbpress-forums ul.chosen-results li.highlighted, body .increase-button:hover, body .decrease-button:hover, body .numeric-pagination span, body .event-item:hover .date>span, body .banner:hover, body .owl-header .carousel-arrows span:hover, body a.button:hover, body button:hover, body a.button.active-button, body button.active-button, body .banner-rotator-content, body .image-banner a, body .flex-direction-nav a:hover, body #button-to-top:hover, body .post-side-meta .post-format:hover, body .issue-icon, body .chosen-container .chosen-results li.highlighted, body .dropcap.squared.blue, body #content .section.full-width-bg .most-popular .pricing-header, body .shopping-cart:hover .cart-button, body .shop-product-gallery .fullscreen-icon:hover, body input.minus:hover, body input.plus:hover, body .upcoming-events>li:hover .date>span, body a.tag:hover { background: " . get_option('sense_accent1_color') . "; }";
 	echo "body .banner.donate-banner  { background: " . get_option('sense_bg_banner_donate_color') . "; }";
 	
 	echo "body .banner.donate-banner h5, body .section.full-width-bg .banner.donate-banner h5  { color: " . get_option('sense_text_banner_donate_color') . " !important; }";
 	
 	echo "body input.minus:hover, body input.plus:hover, body .increase-button:hover, body .decrease-button:hover   { border-color: " . get_option('sense_accent1_color') . " !important; }";
 	
-	echo "body #main-footer p, body .twitter-widget li { color: " . get_option('sense_footer_text_color') . "; }";
+	echo "body #main-footer p, body .twitter-widget li, body footer .textwidget { color: " . get_option('sense_footer_text_color') . "; }";
 	echo "body footer .widget a, body .twitter-widget a { color: " . get_option('sense_footer_text_color_link') . "; }";
 	echo "body footer a:hover { color: " . get_option('sense_footer_text_color_link_hover') . " !important; }";
 	
@@ -534,6 +534,57 @@ function candidate_css_loader() {
 		} 
 		";	
 		
+	
+	
+	
+	
+	
+	
+	
+	$is_page_newsletter_font_family = get_option('sense_page_newsletter_font');
+	$is_page_newsletter_font_color = get_option('sense_page_newsletter_font_color');
+	$is_page_newsletter_font_style = get_option('sense_page_newsletter_styles');
+	$is_page_newsletter_font_size = get_option('sense_page_newsletter_size');	
+		
+	echo "
+		body #newsletter h5
+		{	
+		font-family: '" . $is_page_newsletter_font_family . "' !important;  color: " . $is_page_newsletter_font_color . " !important; font-style: " . $is_page_newsletter_font_style . ";  font-size: " . $is_page_newsletter_font_size . " !important; 
+		} 
+		";	
+	
+	
+	
+	$is_page_list_font_family = get_option('sense_page_list_font');
+	$is_page_list_font_color = get_option('sense_page_list_font_color');
+	$is_page_list_font_style = get_option('sense_page_list_styles');
+	$is_page_list_font_size = get_option('sense_page_list_size');	
+		
+	echo "
+		#content .list li a, #content ul li a
+		{	
+		font-family: '" . $is_page_list_font_family . "' !important;  color: " . $is_page_list_font_color . "; font-style: " . $is_page_list_font_style . ";  font-size: " . $is_page_list_font_size . " !important; 
+		} 
+		";	
+	
+	$is_footer_list_font_family = get_option('sense_footer_list_font');
+	$is_footer_list_font_color = get_option('sense_footer_list_font_color');
+	$is_footer_list_font_style = get_option('sense_footer_list_styles');
+	$is_footer_list_font_size = get_option('sense_footer_list_size');	
+		
+	echo "
+		footer .menu li a, footer li a, body footer .widget li a
+		{	
+		font-family: '" . $is_footer_list_font_family . "' !important;  color: " . $is_footer_list_font_color . "; font-style: " . $is_footer_list_font_style . ";  font-size: " . $is_footer_list_font_size . " !important; 
+		} 
+		";	
+	
+	
+	
+	
+	
+	
+	
 	
 	$is_breadcrumb_font_family = get_option('sense_breadcrumb_font');
 	$is_breadcrumb_font_color = get_option('sense_breadcrumb_font_color');

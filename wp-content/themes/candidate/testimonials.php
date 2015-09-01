@@ -73,14 +73,14 @@ $sidebar_class = 'col-lg-12 col-md-12 col-sm-12';
 				<div class="testimonial animate-onscroll">
 					
 					<div class="testimonial-content">
-						<p><?php echo esc_html($des); ?></p>
+						<p><?php the_content(); ?></p>
 					</div>
 					
 					<div class="testimonial-author">
 						<img src="<?php if(isset($thumb_image_url[0])) echo esc_url($thumb_image_url[0]); ?>" alt="">
 						<div class="author-meta">
-							<span class="name"><?php echo esc_html($title1) .','; ?></span>
-							<span class="location"><?php echo esc_html($address); ?></span>
+							<span class="name"><?php echo esc_attr($title1) .','; ?></span>
+							<span class="location"><?php echo esc_attr($address); ?></span>
 						</div>
 					</div>
 					

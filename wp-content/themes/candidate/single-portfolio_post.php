@@ -339,7 +339,7 @@ $format = get_meta_option('portfolio_post_type', $post->ID);
 						'cancel_reply_link' => __( '<h4 style="margin-top:0; margin-bottom:5px;" >Cancel reply</h4>', THEMENAME ),  					
 						'comment_field' => $comment_field,
 						'comment_notes_before' => '',
-						'comment_notes_after'=>'<input type="submit" name="submit" value="Post Comment">'
+						'comment_notes_after'=>'<input type="submit" name="submit" value="'. __( 'Post Comment', THEMENAME ) .'">'
 						);
 						
 				comment_form($comments_args);
@@ -514,7 +514,7 @@ $format = get_meta_option('portfolio_post_type', $post->ID);
 			<div class="row portfolio-pagination">
 							
 				<div class="col-lg-4 col-md-4 col-sm-4 button-pagination align-left animate-onscroll">
-				<?php  previous_post_link( '%link', 'Prev project' );  ?>
+				<?php  previous_post_link( '%link', __('Prev project', THEMENAME ) );  ?>
 				</div>
 				
 				<div class="col-lg-4 col-md-4 col-sm-4 align-center animate-onscroll">
@@ -522,7 +522,7 @@ $format = get_meta_option('portfolio_post_type', $post->ID);
 				</div>
 				
 				<div class="col-lg-4 col-md-4 col-sm-4 button-pagination align-right animate-onscroll">
-					<?php  next_post_link( '%link', 'Next project' ); ?>
+					<?php  next_post_link( '%link', __('Next project', THEMENAME ) ); ?>
 				</div>
 				
 			</div>	

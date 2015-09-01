@@ -191,7 +191,7 @@ $sidebar_class = 'col-lg-12 col-md-12 col-sm-12';
 								<p><?php candidat_the_excerpt_max_charlength(30); ?></p>
 								<?php } ?>
 								<?php if($format != 'audio'){ ?>
-								<a href="<?php echo esc_url(get_permalink()); ?>" class="button read-more-button big button-arrow"><?php esc_html_e( 'Read More', THEMENAME ); ?></a>
+								<a href="<?php echo esc_url(get_permalink()); ?>" class="button read-more-button big button-arrow"><?php $read_more = get_option('sense_more_text');  echo $read_more; ?></a>
 								<?php } ?>
 								
 							</div>
@@ -204,7 +204,7 @@ $sidebar_class = 'col-lg-12 col-md-12 col-sm-12';
 						<p><?php candidat_the_excerpt_max_charlength(30); ?></p>
 						<?php } ?>
 						<?php if($format == 'audio'){ ?>
-						<a href="<?php echo esc_url(get_permalink()); ?>" class="button read-more-button big button-arrow"><?php esc_html_e( 'Read More', THEMENAME ); ?></a>
+						<a href="<?php echo esc_url(get_permalink()); ?>" class="button read-more-button big button-arrow"><?php $read_more = get_option('sense_more_text');  echo $read_more; ?></a>
 						<?php } ?>
 
 					</div>

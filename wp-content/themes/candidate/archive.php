@@ -231,7 +231,7 @@ get_header(); ?>
 								<blockquote class="iconic-quote link-quote"><a href="<?php echo esc_url(get_meta_option('custom_link_meta_box', $post_id)); ?>"><?php candidat_the_excerpt_max_charlength(40); ?></a></blockquote>
 								<?php } ?>
 								
-								<a href="<?php echo esc_url(get_permalink()); ?>" class="button read-more-button big button-arrow"><?php esc_html_e( 'Read More', THEMENAME ); ?></a>
+								<a href="<?php echo esc_url(get_permalink()); ?>" class="button read-more-button big button-arrow"><?php $read_more = get_option('sense_more_text');  echo $read_more; ?></a>
 								
 							</div>
 							

@@ -477,7 +477,7 @@ class FacebookLikeBoxWidget extends WP_Widget
 		echo '<p style="text-align:right;"><label for="' . $this->get_field_name('twitterUsername') . '">' . __('Twitter Username:', THEMENAME) . ' <input style="width: 100px;" id="' . $this->get_field_id('twitterUsername') . '" name="' . $this->get_field_name('twitterUsername') . '" type="text" value="' . $twitterUsername . '" /></label></p>';
 		echo '<p style="text-align:left;">3. Select Twitter Signature or Twitter Counter style below</p>';		
 		# Fill Twitter Buttons Style Selection
-		echo '<p style="text-align:right;"><label for="' . $this->get_field_name('twitterButtonStyle') . '">' . __('', THEMENAME) . ' <select name="' . $this->get_field_name('twitterButtonStyle')  . '" id="' . $this->get_field_id('twitterButtonStyle')  . '">"';
+		echo '<p style="text-align:right;"><label for="' . $this->get_field_name('twitterButtonStyle') . '">' . __('Button Style', THEMENAME) . ' <select name="' . $this->get_field_name('twitterButtonStyle')  . '" id="' . $this->get_field_id('twitterButtonStyle')  . '">"';
 ?>
 		<option value="127" <?php if ($twitterButtonStyle == '127') echo 'selected="yes"'; ?> >Counter 7 (150x90) - Free</option>
 		<option value="40" <?php if ($twitterButtonStyle == '40') echo 'selected="yes"'; ?> >Special 1 (160x200) - Free</option>

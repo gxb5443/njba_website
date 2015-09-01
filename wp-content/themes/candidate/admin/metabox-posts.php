@@ -18,7 +18,7 @@ $config_img = array(
 );
 $options_img = array(
 	array(
-			'desc' => __('<strong>NOTE: Click the "Add images" button to upload the images to this post.<br/>You can drag-and-drop images to re-order them.</strong><br />', 'THEMENAME'),
+			'desc' => '<strong>'. __('NOTE: Click the Add Images button to upload the images to this post. You can drag-and-drop images to re-order them.', THEMENAME).'</strong><br />',
 			'id' => $prefix . 'slider_image_gallery',
 			'button' => __('Add Images', THEMENAME),
 			'class' => 'noborder',
@@ -39,7 +39,7 @@ $config_link = array(
 );
 $options_link = array(
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'custom_link_meta_box',
 		'desc' => __('URL Link',  THEMENAME),
 		'std' => '',
@@ -62,7 +62,7 @@ $config_audio = array(
 );
 $options_audio = array(
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'custom_audio_meta_box',
 		'desc' => __('URL Audio',  THEMENAME),
 		'std' => '',
@@ -95,7 +95,7 @@ $config_slideshow = array(
 $options_slideshow = array(
 
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'slideshow_btn_url_meta_box',
 		'desc' => __('Button URL',  THEMENAME),
 		'std' => '',
@@ -104,7 +104,7 @@ $options_slideshow = array(
 		'type' => 'text'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'slideshow_btn_meta_box',
 		'desc' => __('Button Text',  THEMENAME),
 		'std' => '',
@@ -113,7 +113,7 @@ $options_slideshow = array(
 		'type' => 'text'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'slideshow_btn_pos_meta_box',
 		'desc' => __('Position',  THEMENAME),
 		'std' => '',
@@ -144,7 +144,7 @@ $config_team = array(
 $options_team = array(
 
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'team_social_show_meta_box',
 		'desc' => __('Show Social Block',  THEMENAME),
 		'std' => '',
@@ -153,7 +153,7 @@ $options_team = array(
 		'type' => 'select'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'team_share_show_meta_box',
 		'desc' => __('Show Share Block',  THEMENAME),
 		'std' => '',
@@ -162,7 +162,7 @@ $options_team = array(
 		'type' => 'select'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'team_job_meta_box',
 		'desc' => __('Job',  THEMENAME),
 		'std' => '',
@@ -171,7 +171,7 @@ $options_team = array(
 		'type' => 'text'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'team_facebook_meta_box',
 		'desc' => __('Facebook Link',  THEMENAME),
 		'std' => '',
@@ -180,7 +180,7 @@ $options_team = array(
 		'type' => 'text'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'team_twitter_meta_box',
 		'desc' => __('Twitter Link',  THEMENAME),
 		'std' => '',
@@ -189,7 +189,7 @@ $options_team = array(
 		'type' => 'text'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'team_google_meta_box',
 		'desc' => __('Google+ Link',  THEMENAME),
 		'std' => '',
@@ -198,7 +198,7 @@ $options_team = array(
 		'type' => 'text'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'team_youtube_meta_box',
 		'desc' => __('Youtube Link',  THEMENAME),
 		'std' => '',
@@ -207,7 +207,7 @@ $options_team = array(
 		'type' => 'text'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'team_flickr_meta_box',
 		'desc' => __('Flickr Link',  THEMENAME),
 		'std' => '',
@@ -217,7 +217,7 @@ $options_team = array(
 	),
 	
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'team_instagram_meta_box',
 		'desc' => __('Instagram Link',  THEMENAME),
 		'std' => '',
@@ -227,7 +227,7 @@ $options_team = array(
 	),
 	
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'team_linkedin_meta_box',
 		'desc' => __('LinkedIn Link',  THEMENAME),
 		'std' => '',
@@ -237,7 +237,7 @@ $options_team = array(
 	),
 	
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'team_mail_meta_box',
 		'desc' => __('Mail Link',  THEMENAME),
 		'std' => '',
@@ -263,7 +263,7 @@ $config_testimonial = array(
 );
 $options_testimonial = array(
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'address_testimonial_meta_box',
 		'desc' => __('Address',  THEMENAME),
 		'std' => '',
@@ -289,7 +289,7 @@ $config_issues = array(
 );
 $options_issues = array(
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'issues_icon_meta_box',
 		'desc' => __('Type Icon',  THEMENAME),
 		'options' => $icon_arr_meta,
@@ -315,14 +315,14 @@ $options_portfolio = array(
 	array(
 		'name' => __('URL Project', THEMENAME),
 		'id' => $prefix . 'portfolio_link_meta_box',
-		'desc' => __('',  THEMENAME),
+		'desc' => '',
 		'std' => '',
 		'size' => '30',
 		'class' => 'noborder',
 		'type' => 'text'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'target_portfolio_post_meta_box',
 		'desc' => __('New Tab/Window',  THEMENAME),
 		'std' => '',
@@ -330,7 +330,7 @@ $options_portfolio = array(
 		'type' => 'checkbox'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'extended_meta_box',
 		'desc' => __('Extended',  THEMENAME),
 		'std' => '',
@@ -338,7 +338,7 @@ $options_portfolio = array(
 		'type' => 'checkbox'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'portfolio_post_type',
 		'desc' => __('Type Portfolio ',  THEMENAME),
 		'std' => 'image',
@@ -347,7 +347,7 @@ $options_portfolio = array(
 		'type' => 'select'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'portfolio_video_type',
 		'desc' => __('Type Video ',  THEMENAME),
 		'std' => 'image',
@@ -356,7 +356,7 @@ $options_portfolio = array(
 		'type' => 'select'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'portfolio_post_video',
 		'desc' => __('URL Video',  THEMENAME),
 		'std' => '',
@@ -366,7 +366,7 @@ $options_portfolio = array(
 	),
 	
 	array(
-			'desc' => __('<strong>NOTE: Click the "Add images" button to upload the images to this post.<br/>You can drag-and-drop images to re-order them.</strong><br />', 'THEMENAME'),
+			'desc' => '<strong>'. __('NOTE: Click the Add Images button to upload the images to this post. You can drag-and-drop images to re-order them.', THEMENAME) .'</strong><br />',
 			'id' => $prefix . 'portfolio_post_gallery',
 			'button' => __('Add Images', THEMENAME),
 			'class' => 'portfolio_gallery_block',
@@ -408,11 +408,11 @@ $config_events = array(
 );
 $options_events = array(
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'events_type_meta_box',
 		'desc' => __('Style Event  ',  THEMENAME),
 		'std' => 'style1',
-		'options' => array('style1' => 'style1','style2' => 'style2' ),
+		'options' => array('style1' => 'style1 with full map','style12' => 'style1 with boxed map','style2' => 'style2' ),
 		'class' => 'noborder',
 		'type' => 'select'
 	)
@@ -433,7 +433,7 @@ $config_events = array(
 );
 $options_events = array(
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'campaign_text_meta_box',
 		'desc' => __('Main Title',  THEMENAME),
 		'std' => '',
@@ -442,7 +442,7 @@ $options_events = array(
 		'type' => 'text'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'campaign_btn_url_meta_box',
 		'desc' => __('Button URL',  THEMENAME),
 		'std' => '',
@@ -451,7 +451,7 @@ $options_events = array(
 		'type' => 'text'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'campaign_btn_meta_box',
 		'desc' => __('Button Text',  THEMENAME),
 		'std' => '',
@@ -460,7 +460,7 @@ $options_events = array(
 		'type' => 'text'
 	),
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'campaign_date_meta_box',
 		'desc' => __('Campaign Date',  THEMENAME),
 		'std' => '',
@@ -491,7 +491,7 @@ $config_page_portfolio = array(
 );
 $options_page_portfolio = array(
 	array(
-		'name' => __('', THEMENAME),
+		'name' => '',
 		'id' => $prefix . 'cat_page_portfolio_meta_box',
 		'desc' => __('Choose the category for portfolio page',  THEMENAME),
 		'std' => '',

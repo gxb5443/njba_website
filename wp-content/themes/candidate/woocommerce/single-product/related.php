@@ -42,7 +42,7 @@ if ( $products->have_posts() ) : ?>
 
 	<div class="row related-products">
 		<div class="col-lg-12 col-md-12 col-sm-12 animate-onscroll">
-			<h3><?php _e( 'Related Products', 'woocommerce' ); ?></h3>
+			<h3><?php _e( 'Related Products', THEMENAME ); ?></h3>
 		</div>
 							
 							

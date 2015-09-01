@@ -1,3 +1,4 @@
+
 <!-- Footer -->
 <?php if( get_option('sense_show_footer') && get_option('sense_show_footer') == 'show' ) { ?>
 
@@ -83,7 +84,6 @@
 								<?php if(get_option('sense_show_footer_soc') != '' && get_option('sense_show_footer_soc') != 'hide' ) { 
 
 								?>
-<!--
 								<ul class="social-buttons">
 									<li>
 										<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" style="border:none; overflow:hidden; height:21px; padding-top:1px;  width:50px;"></iframe>
@@ -95,7 +95,6 @@
 										<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
 									</li>
 								</ul>
--->
 								<?php } ?>
 							</div>
 

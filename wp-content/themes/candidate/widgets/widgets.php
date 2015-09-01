@@ -148,6 +148,8 @@ class Candidat_WP_Widget_Calendar extends WP_Widget {
 		$nav_menu = ! empty( $instance['nav_menu'] ) ? wp_get_nav_menu_object( $instance['nav_menu'] ) : false;
 		$nav_menu2 = ! empty( $instance['nav_menu2'] ) ? wp_get_nav_menu_object( $instance['nav_menu2'] ) : false;
 
+		
+		
 		if ( !$nav_menu )
 			return;
 
@@ -182,7 +184,6 @@ class Candidat_WP_Widget_Calendar extends WP_Widget {
 		
 		$instance['nav_menu'] = (int) $new_instance['nav_menu'];
 		$instance['nav_menu2'] = (int) $new_instance['nav_menu2'];
-		
 		
 		return $instance;
 	}
@@ -241,6 +242,8 @@ class Candidat_WP_Widget_Calendar extends WP_Widget {
 		?>
 			</select>
 		</p>
+		
+		
 		<?php
 	}
 }
@@ -480,7 +483,7 @@ class Candidat_Banner_Donate_Widget extends WP_Widget {
 							<input type="hidden" name="currency_code" value="' . esc_html( $currency ) . '" class="sd_object paypal_object"/>
 							
 							
-							<input type="submit" name="submit"  value="' . __( "Donate", "Candidat" ) . '" class="sd_object" id="sd_submit"  >
+							<input type="submit" name="submit"  value="' . __( "Donate", THEMENAME ) . '" class="sd_object" id="sd_submit"  >
 							
 							
 						</form>	
@@ -1276,7 +1279,7 @@ class Candidat_Mailchimp_Widget extends WP_Widget {
 							</div>
 							
 						</div>
-						<div id="mailchimp-sign-up1" style="font-size:10px;" ><p></p></div>
+						<div id="mailchimp-sign-up1" style="font-size:10px;" ><p>.</p></div>
 		</form>
 		
 

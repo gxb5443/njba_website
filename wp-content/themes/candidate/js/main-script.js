@@ -1805,11 +1805,11 @@ $(document).ready(function(){
 		$(this).ajaxSubmit({
 			success	: function (responseText) {
 				if (responseText === 'added') {
-					$('form#newsletter').fadeOut('slow');
-					$('#mailchimp-sign-up1 p').replaceWith(successMSG).fadeIn('slow');
+					$('form#newsletter').fadeOut(4000);
+					$('#mailchimp-sign-up1 p').replaceWith(successMSG).fadeIn(100);
 				} else if (responseText === 'already subscribed') {
-					$('form#newsletter').fadeOut('slow');
-					$('#mailchimp-sign-up1 p').replaceWith(alreadySubscribedMSG).fadeIn('slow');
+					$('form#newsletter').fadeOut(4000);
+					$('#mailchimp-sign-up1 p').replaceWith(alreadySubscribedMSG).fadeIn(100);
 				} else if (responseText === 'invalid email') {
 					$('#mailchimp-sign-up1 p').replaceWith(invalidEmailMSG).fadeIn('slow');
 				} else {

@@ -1,8 +1,8 @@
 <?php
 // Custom for Composer
-$target_arr = array(__("Same window", "js_composer") => "_self", __("New window", "js_composer") => "_blank");
-$show_arr = array(__("Show", "js_composer") => "_show", __("Hide", "js_composer") => "_hide");
-$btn_size = array(__("Small", "js_composer") => "transparent", __("Middle", "js_composer") => " ", __("Big", "js_composer") => "big");
+$target_arr = array(__("Same window", THEMENAME) => "_self", __("New window", THEMENAME) => "_blank");
+$show_arr = array(__("Show", THEMENAME) => "_show", __("Hide", THEMENAME) => "_hide");
+$btn_size = array(__("Small", THEMENAME) => "transparent", __("Middle", THEMENAME) => " ", __("Big", THEMENAME) => "big");
 
  
 $icon_arr = candidat_custom_fontello_classes();
@@ -98,17 +98,17 @@ vc_map( array(
    "base" => "vc_contact_information",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Google Map block', 'js_composer'),
+	"description" => __('Google Map block', THEMENAME),
    "params" => array(
    
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Title", "js_composer"),
+         "heading" => __("Title", THEMENAME),
          "param_name" => "title",
-         "value" => __("Our Location","js_composer"),
-         "description" => __("Block title.","js_composer")
+         "value" => __("Our Location",THEMENAME),
+         "description" => __("Block title.",THEMENAME)
         ),
 		
 		
@@ -116,17 +116,17 @@ vc_map( array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Google Map Address (51.451955,-0.055755)", "js_composer"),
+         "heading" => __("Google Map Address (51.451955,-0.055755)", THEMENAME),
          "param_name" => "map_address",
          "value" => "",
-         "description" => __("Google Map Address.","js_composer")
+         "description" => __("Google Map Address.",THEMENAME)
         ),
 		
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Google Map Markers", "js_composer"),
+         "heading" => __("Google Map Markers", THEMENAME),
          "param_name" => "map_markers",
          "value" => "",
          "description" => ""
@@ -134,19 +134,19 @@ vc_map( array(
 		
 		array(
 		  "type" => "attach_image",
-		  "heading" => __("Marker image", "js_composer"),
+		  "heading" => __("Marker image", THEMENAME),
 		  "param_name" => "image_markers",
 		  "value" => "",
-		  "description" => __("Select marker image from media library.", "js_composer")
+		  "description" => __("Select marker image from media library.", THEMENAME)
 		),
 
         array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -251,33 +251,33 @@ vc_map( array(
    "name" => __("Home block of Flexslider", THEMENAME),
    "base" => "vc_flexslider",
     "wrapper_class" => "clearfix",
-  "category" => __('Content', 'js_composer'),
-  "description" => __('A block of flexslider', 'js_composer'),
+  "category" => __('Content', THEMENAME),
+  "description" => __('A block of flexslider', THEMENAME),
    "params" => array(
 		array(
             "type" => "dropdown",
-            "heading" => __("Slideshow", "js_composer"),
+            "heading" => __("Slideshow", THEMENAME),
             "param_name" => "slideshow",
-            "description" => __('Select slideshow.', 'js_composer'),
-            "value" => array(__("Yes", "js_composer") => "true", __("No", "js_composer") => "false")
+            "description" => __('Select slideshow.', THEMENAME),
+            "value" => array(__("Yes", THEMENAME) => "true", __("No", THEMENAME) => "false")
         ),
    
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Slideshow speed", "js_composer"),
+         "heading" => __("Slideshow speed", THEMENAME),
          "param_name" => "slideshowspeed",
          "value" => "5000",
-         "description" => __("Enter of slideshow speed.","js_composer")
+         "description" => __("Enter of slideshow speed.",THEMENAME)
         ),
       array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
    )
 ) );
@@ -350,7 +350,7 @@ function vc_mylatest_news_func( $atts, $content = null ) {
 							
 	$output .=  '<p>'. candidat_the_excerpt_max_charlength_text(get_the_excerpt(), 32) .'</p>
 							
-							<a href="'. get_permalink($post_id) .'" class="button read-more-button big button-arrow">'. __('Read More', 'js_composer') .'</a>
+							<a href="'. get_permalink($post_id) .'" class="button read-more-button big button-arrow">'. get_option('sense_more_text') .'</a>
 							
 						</div>
 						<!-- /Blog Post -->';
@@ -368,42 +368,42 @@ vc_map( array(
    "base" => "vc_mylatest_news",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Home block of Latest News', 'js_composer'),
+	"description" => __('Home block of Latest News', THEMENAME),
    "params" => array(
    
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Title", "js_composer"),
+         "heading" => __("Title", THEMENAME),
          "param_name" => "title",
-         "value" => __("Latest news","js_composer"),
-         "description" => __("Block title.","js_composer")
+         "value" => __("Latest news",THEMENAME),
+         "description" => __("Block title.",THEMENAME)
         ),
 		
 		array(
             "type" => "post_category",
-            "heading" => __("Select category", "js_composer"),
+            "heading" => __("Select category", THEMENAME),
             "param_name" => "my_product_cat",
-            "description" => __("Select category.", "js_composer")
+            "description" => __("Select category.", THEMENAME)
         ),
 	   
 	    array(
 		  "type" => "dropdown",
-		  "heading" => __("Author Show", "js_composer"),
+		  "heading" => __("Author Show", THEMENAME),
 		  "param_name" => "author_show",
-		  "description" => __("Select show or hide author info.", "js_composer"),
+		  "description" => __("Select show or hide author info.", THEMENAME),
 		  'value' => $show_arr
 		  
 		),
 	   
         array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -418,8 +418,8 @@ function vc_mylatest_post_func( $atts, $content = null ) { // New function param
       'title' => '',
       'video_thumbnails' => '',
       'my_product_cat' => '',
-      'columns_count' => '3',
-      'num_items' => '',
+      'columns_count' => 3,
+      'num_items' => 4,
       'author_show' => '',
       'css_animation' => ''
    ), $atts ) );
@@ -435,9 +435,7 @@ function vc_mylatest_post_func( $atts, $content = null ) { // New function param
 	$my_cat = $term->slug;
 	}
 	
-	$num_items =  $num_items + 1;
-	
-	
+	//$num_items =  $num_items + 1;
 	
 	
     $args = array(  
@@ -559,7 +557,7 @@ function vc_mylatest_post_func( $atts, $content = null ) { // New function param
 						
 	$output .=  '<p>'. candidat_the_excerpt_max_charlength_text(get_the_excerpt(), 12) .'</p>
 						
-						<a href="'. get_permalink($post_id) .'" class="button read-more-button big button-arrow">'. __('Read More', 'js_composer') .'</a>
+						<a href="'. get_permalink($post_id) .'" class="button read-more-button big button-arrow">'. get_option('sense_more_text') .'</a>
 						
 					</div>
 					<!-- /Blog Post -->
@@ -581,69 +579,69 @@ vc_map( array(
    "base" => "vc_mylatest_post",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Home block of Other Stories', 'js_composer'),
+	"description" => __('Home block of Other Stories', THEMENAME),
    "params" => array(
    
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Title", "js_composer"),
+         "heading" => __("Title", THEMENAME),
          "param_name" => "title",
-         "value" => __("Other Stories","js_composer"),
-         "description" => __("Block title.","js_composer")
+         "value" => __("Other Stories",THEMENAME),
+         "description" => __("Block title.",THEMENAME)
         ),
 		
 		array(
             "type" => "post_category",
-            "heading" => __("Select category", "js_composer"),
+            "heading" => __("Select category", THEMENAME),
             "param_name" => "my_product_cat",
-            "description" => __("Select category.", "js_composer")
+            "description" => __("Select category.", THEMENAME)
         ),
    
 		array(
 			'type' => 'checkbox',
-			'heading' => __( 'Video Thumbnails', 'js_composer' ),
+			'heading' => __( 'Video Thumbnails', THEMENAME ),
 			'param_name' => 'video_thumbnails',
-			'description' => __( 'If selected, show Video Thumbnails.', 'js_composer' ),
-			'value' => array( __( 'Yes, please', 'js_composer' ) => 'yes' )
+			'description' => __( 'If selected, show Video Thumbnails.', THEMENAME ),
+			'value' => array( __( 'Yes, please', THEMENAME ) => 'yes' )
 		),
 		
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Number items", "js_composer"),
+         "heading" => __("Number items", THEMENAME),
          "param_name" => "num_items",
-         "value" => "4",
-         "description" => __("Number of items in a carousel.","js_composer")
+         "std" => 4,
+         "description" => __("Number of items in a carousel.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Number columns", "js_composer"),
+         "heading" => __("Number columns", THEMENAME),
          "param_name" => "columns_count",
-         "value" => "3",
-         "description" => __("Number columns in a carousel.","js_composer")
+         "std" => 3,
+         "description" => __("Number columns in a carousel.",THEMENAME)
         ),
    
 		 array(
 		  "type" => "dropdown",
-		  "heading" => __("Author Show", "js_composer"),
+		  "heading" => __("Author Show", THEMENAME),
 		  "param_name" => "author_show",
-		  "description" => __("Select show or hide author info.", "js_composer"),
+		  "description" => __("Select show or hide author info.", THEMENAME),
 		  'value' => $show_arr
 		  
 		),
 
         array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -722,26 +720,26 @@ vc_map( array(
    "base" => "vc_mylatest_campaign",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Home block of Campaign', 'js_composer'),
+	"description" => __('Home block of Campaign', THEMENAME),
    "params" => array(
 
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Number items", "js_composer"),
+         "heading" => __("Number items", THEMENAME),
          "param_name" => "num_items",
          "value" => "4",
-         "description" => __("Number of items in a carousel.","js_composer")
+         "description" => __("Number of items in a carousel.",THEMENAME)
         ),
    
         array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -794,36 +792,39 @@ vc_map( array(
    "base" => "vc_banner",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Home block of Banner', 'js_composer'),
+	"description" => __('Home block of Banner', THEMENAME),
    "params" => array(
 		
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Title", "js_composer"),
+         "heading" => __("Title", THEMENAME),
          "param_name" => "title",
-         "value" => __("Title Banner","js_composer"),
-         "description" => __("Block title.","js_composer")
+         "value" => __("Title Banner",THEMENAME),
+         "description" => __("Block title.",THEMENAME)
         ),
 		array(
 			'type' => 'dropdown',
-			'heading' => __( 'Background Style', 'js_composer' ),
+			'heading' => __( 'Background Style', THEMENAME ),
 			'param_name' => 'background_style',
 			'value' => array(
-				__( 'Default', 'js_composer' ) => '',
-				__( 'Custom', 'js_composer' ) => 'custom',
+				__( 'Default', THEMENAME ) => '',
+				__( 'Custom', THEMENAME ) => 'custom',
 			),
-			'description' => __( 'Background style.', 'js_composer' )
+			'description' => __( 'Background style.', THEMENAME )
 		),
+		
+		
+		
 		array(
 			'type' => 'colorpicker',
-			'heading' => __( 'Custom Background Color', 'js_composer' ),
+			'heading' => __( 'Custom Background Color', THEMENAME ),
 			'param_name' => 'custom_color',
-			'description' => __( 'Select custom color.', 'js_composer' ),
+			'description' => __( 'Select custom color.', THEMENAME ),
 			'dependency' => array(
-				'element' => 'color',
-				'value' => 'custom',
+				'element' => 'background_style',
+				'value' => 'custom'
 			),
 		),
 		
@@ -832,50 +833,50 @@ vc_map( array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Text Banner", "js_composer"),
+         "heading" => __("Text Banner", THEMENAME),
          "param_name" => "text_banner",
          "value" => "Text Banner",
-         "description" => __("Number of items in a carousel.","js_composer")
+         "description" => __("Number of items in a carousel.",THEMENAME)
         ),
 		array(
             "type" => "dropdown",
-            "heading" => __("Select Icon", "js_composer"),
+            "heading" => __("Select Icon", THEMENAME),
             "param_name" => "icon",
-            "description" => __('Select Icon.', 'js_composer'),
+            "description" => __('Select Icon.', THEMENAME),
             'value' => $icon_arr
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("URL Link", "js_composer"),
+         "heading" => __("URL Link", THEMENAME),
          "param_name" => "custom_link",
          "value" => "",
-         "description" => __("URL Link.","js_composer")
+         "description" => __("URL Link.",THEMENAME)
         ),
 		array(
             "type" => "dropdown",
-            "heading" => __("Target Link", "js_composer"),
+            "heading" => __("Target Link", THEMENAME),
             "param_name" => "custom_links_target",
-            "description" => __('Select where to open  custom links.', 'js_composer'),
+            "description" => __('Select where to open  custom links.', THEMENAME),
             'value' => $target_arr
         ),
 		
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("Style", "js_composer"),
+		  "heading" => __("Style", THEMENAME),
 		  "param_name" => "my_style",
 		  "admin_label" => true,
-		  "value" => array(__("Style1", "js_composer") => "mystyle1", __("Style2", "js_composer") => "mystyle2"),
-		  "description" => __("Select style type.", "js_composer")
+		  "value" => array(__("Style1", THEMENAME) => "mystyle1", __("Style2", THEMENAME) => "mystyle2"),
+		  "description" => __("Select style type.", THEMENAME)
 		),
         array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom",THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -946,7 +947,7 @@ function vc_banner_donate_func( $atts, $content = null ) { // New function param
 							<input type="hidden" name="currency_code" value="' . esc_html( $currency_amount ) . '" class="sd_object paypal_object"/>
 							
 							
-							<input type="submit" name="submit"  value="' . __( "Donate", "Candidat" ) . '" class="sd_object" id="sd_submit"  >
+							<input type="submit" name="submit"  value="' . __( "Donate", THEMENAME ) . '" class="sd_object" id="sd_submit"  >
 							
 							
 						</form>';	
@@ -993,64 +994,64 @@ vc_map( array(
    "base" => "vc_banner_donate",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Home block of Banner Donate', 'js_composer'),
+	"description" => __('Home block of Banner Donate', THEMENAME),
    "params" => array(
 		
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Title", "js_composer"),
+         "heading" => __("Title", THEMENAME),
          "param_name" => "title",
-         "value" => __("Make a <strong>quick donation</strong> here","js_composer"),
-         "description" => __("Block title.","js_composer")
+         "value" => __("Make a <strong>quick donation</strong> here",THEMENAME),
+         "description" => __("Block title.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Text Amount1", "js_composer"),
+         "heading" => __("Text Amount1", THEMENAME),
          "param_name" => "text_amount1",
          "value" => "5",
-         "description" => __("Text Amount1.","js_composer")
+         "description" => __("Text Amount1.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Text Amount2", "js_composer"),
+         "heading" => __("Text Amount2", THEMENAME),
          "param_name" => "text_amount2",
          "value" => "25",
-         "description" => __("Text Amount2.","js_composer")
+         "description" => __("Text Amount2.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Text Amount3", "js_composer"),
+         "heading" => __("Text Amount3", THEMENAME),
          "param_name" => "text_amount3",
          "value" => "100",
-         "description" => __("Text Amount3.","js_composer")
+         "description" => __("Text Amount3.",THEMENAME)
         ),
 		
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("PayPal Email Address", "js_composer"),
+         "heading" => __("PayPal Email Address", THEMENAME),
          "param_name" => "url_amount",
          "value" => "",
-         "description" => __("PayPal Email Address.","js_composer")
+         "description" => __("PayPal Email Address.",THEMENAME)
         ),
 		
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Organization", "js_composer"),
+         "heading" => __("Organization", THEMENAME),
          "param_name" => "org_donate",
          "value" => "",
-         "description" => __("PayPal Email Address.","js_composer")
+         "description" => __("PayPal Email Address.",THEMENAME)
         ),
 		
 		// array(
@@ -1064,21 +1065,21 @@ vc_map( array(
 		
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("Currency Amount", "js_composer"),
+		  "heading" => __("Currency Amount", THEMENAME),
 		  "param_name" => "currency_amount",
 		  "admin_label" => true,
 		  "value" => $homeshop_currency_code_options,
-		  "description" => __("Select Currency Amount.", "js_composer")
+		  "description" => __("Select Currency Amount.", THEMENAME)
 		),
 		
 		
         array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -1162,106 +1163,106 @@ vc_map( array(
    "base" => "vc_social_media1",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Home block of Social Media', 'js_composer'),
+	"description" => __('Home block of Social Media', THEMENAME),
    "params" => array(
 		
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Title", "js_composer"),
+         "heading" => __("Title", THEMENAME),
          "param_name" => "title",
-         "value" => __("Get connected","js_composer"),
-         "description" => __("Block title.","js_composer")
+         "value" => __("Get connected",THEMENAME),
+         "description" => __("Block title.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Facebook URL Link", "js_composer"),
+         "heading" => __("Facebook URL Link", THEMENAME),
          "param_name" => "custom_link1",
          "value" => "",
-         "description" => __("URL Link.","js_composer")
+         "description" => __("URL Link.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Twitter URL Link", "js_composer"),
+         "heading" => __("Twitter URL Link", THEMENAME),
          "param_name" => "custom_link2",
          "value" => "",
-         "description" => __("URL Link.","js_composer")
+         "description" => __("URL Link.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Google Plus URL Link", "js_composer"),
+         "heading" => __("Google Plus URL Link", THEMENAME),
          "param_name" => "custom_link3",
          "value" => "",
-         "description" => __("URL Link.","js_composer")
+         "description" => __("URL Link.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Youtube URL Link", "js_composer"),
+         "heading" => __("Youtube URL Link", THEMENAME),
          "param_name" => "custom_link4",
          "value" => "",
-         "description" => __("URL Link.","js_composer")
+         "description" => __("URL Link.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Flickr URL Link", "js_composer"),
+         "heading" => __("Flickr URL Link", THEMENAME),
          "param_name" => "custom_link5",
          "value" => "",
-         "description" => __("URL Link.","js_composer")
+         "description" => __("URL Link.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Email URL Link", "js_composer"),
+         "heading" => __("Email URL Link", THEMENAME),
          "param_name" => "custom_link6",
          "value" => "",
-         "description" => __("URL Link.","js_composer")
+         "description" => __("URL Link.",THEMENAME)
         ),
 
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("LinkedIn URL Link", "js_composer"),
+         "heading" => __("LinkedIn URL Link", THEMENAME),
          "param_name" => "custom_link7",
          "value" => "",
-         "description" => __("URL Link.","js_composer")
+         "description" => __("URL Link.",THEMENAME)
         ),
 		
 		
 		array(
             "type" => "dropdown",
-            "heading" => __("Target Link", "js_composer"),
+            "heading" => __("Target Link", THEMENAME),
             "param_name" => "custom_links_target",
-            "description" => __('Select where to open  custom links.', 'js_composer'),
+            "description" => __('Select where to open  custom links.', THEMENAME),
             'value' => $target_arr
         ),
         array(
 		  "type" => "dropdown",
-		  "heading" => __("Social Show", "js_composer"),
+		  "heading" => __("Social Show", THEMENAME),
 		  "param_name" => "social_show",
-		  "description" => __("Select show or hide social buttons.", "js_composer"),
+		  "description" => __("Select show or hide social buttons.", THEMENAME),
 		  'value' => $show_arr
 		  
 		),
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -1282,7 +1283,7 @@ function vc_featured_video_func( $atts, $content = null ) { // New function para
 	'custom_link' => '',
 	'custom_link_text' => '',
 	'custom_links_target' => '',
-	'type_video' => '',
+	'type_video' => 'youtube',
     'css_animation' => ''
    ), $atts ) );
  
@@ -1325,68 +1326,68 @@ vc_map( array(
    "base" => "vc_featured_video",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Home block of Featured Video', 'js_composer'),
+	"description" => __('Home block of Featured Video', THEMENAME),
    "params" => array(
 		
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Title", "js_composer"),
+         "heading" => __("Title", THEMENAME),
          "param_name" => "title",
-         "value" => __("Featured Video","js_composer"),
-         "description" => __("Block title.","js_composer")
+         "value" => __("Featured Video",THEMENAME),
+         "description" => __("Block title.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Video URL ID", "js_composer"),
+         "heading" => __("Video URL ID", THEMENAME),
          "param_name" => "video_link",
          "value" => "",
-         "description" => __("URL Video.","js_composer")
+         "description" => __("URL Video.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("More Videos URL", "js_composer"),
+         "heading" => __("More Videos URL", THEMENAME),
          "param_name" => "custom_link",
          "value" => "",
-         "description" => __("URL Link.","js_composer")
+         "description" => __("URL Link.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("More Videos Text", "js_composer"),
+         "heading" => __("More Videos Text", THEMENAME),
          "param_name" => "custom_link_text",
          "value" => "",
-         "description" => __("Text Link.","js_composer")
+         "description" => __("Text Link.",THEMENAME)
         ),		
 		array(
             "type" => "dropdown",
-            "heading" => __("Target Link", "js_composer"),
+            "heading" => __("Target Link", THEMENAME),
             "param_name" => "custom_links_target",
-            "description" => __('Select where to open  custom links.', 'js_composer'),
+            "description" => __('Select where to open  custom links.', THEMENAME),
             'value' => $target_arr
         ),
 		
 		array(
             "type" => "dropdown",
-            "heading" => __("Type Video", "js_composer"),
+            "heading" => __("Type Video", THEMENAME),
             "param_name" => "type_video",
-            "description" => __('Select type video.', 'js_composer'),
-            "value" => array(__("Youtube", "js_composer") => "youtube", __("Vimeo", "js_composer") => "vimeo", __("HTML5", "js_composer") => "html5")
+            "description" => __('Select type video.', THEMENAME),
+            "value" => array(__("Youtube", THEMENAME) => "youtube", __("Vimeo", THEMENAME) => "vimeo", __("HTML5", THEMENAME) => "html5")
         ),
 		
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -1491,27 +1492,27 @@ vc_map( array(
    "base" => "vc_upcoming_events",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Home block of Upcoming Events', 'js_composer'),
+	"description" => __('Home block of Upcoming Events', THEMENAME),
    "params" => array(
 		
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Title", "js_composer"),
+         "heading" => __("Title", THEMENAME),
          "param_name" => "title",
-         "value" => __("Upcoming Events","js_composer"),
-         "description" => __("Block title.","js_composer")
+         "value" => __("Upcoming Events",THEMENAME),
+         "description" => __("Block title.",THEMENAME)
         ),
 		
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Limit", "js_composer"),
+         "heading" => __("Limit", THEMENAME),
          "param_name" => "limit",
          "value" => 2,
-         "description" => __("Events limit.","js_composer")
+         "description" => __("Events limit.",THEMENAME)
         ),
 		
 		
@@ -1519,35 +1520,35 @@ vc_map( array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("More Events URL", "js_composer"),
+         "heading" => __("More Events URL", THEMENAME),
          "param_name" => "custom_link",
          "value" => "",
-         "description" => __("URL Link.","js_composer")
+         "description" => __("URL Link.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("More Events Text", "js_composer"),
+         "heading" => __("More Events Text", THEMENAME),
          "param_name" => "custom_link_text",
          "value" => "More Events",
-         "description" => __("Text Link.","js_composer")
+         "description" => __("Text Link.",THEMENAME)
         ),		
 		array(
             "type" => "dropdown",
-            "heading" => __("Target Link", "js_composer"),
+            "heading" => __("Target Link", THEMENAME),
             "param_name" => "custom_links_target",
-            "description" => __('Select where to open  custom links.', 'js_composer'),
+            "description" => __('Select where to open  custom links.', THEMENAME),
             'value' => $target_arr
         ),
 
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -1605,60 +1606,60 @@ vc_map( array(
    "base" => "vc_main_issues",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Home block of Main Issues', 'js_composer'),
+	"description" => __('Home block of Main Issues', THEMENAME),
    "params" => array(
 		
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Title", "js_composer"),
+         "heading" => __("Title", THEMENAME),
          "param_name" => "title",
-         "value" => __("The main issues","js_composer"),
-         "description" => __("Block title.","js_composer")
+         "value" => __("The main issues",THEMENAME),
+         "description" => __("Block title.",THEMENAME)
         ),
 		
 		array(
          "type" => "attach_image",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Image", "js_composer"),
+         "heading" => __("Image", THEMENAME),
          "param_name" => "custom_image",
-         "description" => __("Select image from media library.","js_composer")
+         "description" => __("Select image from media library.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Btn More URL", "js_composer"),
+         "heading" => __("Btn More URL", THEMENAME),
          "param_name" => "custom_link",
          "value" => "",
-         "description" => __("URL Link.","js_composer")
+         "description" => __("URL Link.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Btn More Text", "js_composer"),
+         "heading" => __("Btn More Text", THEMENAME),
          "param_name" => "custom_link_text",
          "value" => "Find out more",
-         "description" => __("Text Link.","js_composer")
+         "description" => __("Text Link.",THEMENAME)
         ),		
 		array(
             "type" => "dropdown",
-            "heading" => __("Target Link", "js_composer"),
+            "heading" => __("Target Link", THEMENAME),
             "param_name" => "custom_links_target",
-            "description" => __('Select where to open  custom links.', 'js_composer'),
+            "description" => __('Select where to open  custom links.', THEMENAME),
             'value' => $target_arr
         ),
 
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -1735,36 +1736,36 @@ vc_map( array(
    "base" => "vc_mypopular_news",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Block of Popular news', 'js_composer'),
+	"description" => __('Block of Popular news', THEMENAME),
    "params" => array(
 
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Title", "js_composer"),
+         "heading" => __("Title", THEMENAME),
          "param_name" => "title",
-         "value" => __("Popular news","js_composer"),
-         "description" => __("Block title.","js_composer")
+         "value" => __("Popular news",THEMENAME),
+         "description" => __("Block title.",THEMENAME)
         ),
 		
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Number items", "js_composer"),
+         "heading" => __("Number items", THEMENAME),
          "param_name" => "num_items",
          "value" => "4",
-         "description" => __("Number of items in a carousel.","js_composer")
+         "description" => __("Number of items in a carousel.",THEMENAME)
         ),
    
         array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -1810,68 +1811,68 @@ vc_map( array(
    "base" => "vc_mybuttons",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Block of Custom Buttons', 'js_composer'),
+	"description" => __('Block of Custom Buttons', THEMENAME),
    "params" => array(
 		
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Title", "js_composer"),
+         "heading" => __("Title", THEMENAME),
          "param_name" => "title",
-         "value" => __("Button","js_composer"),
-         "description" => __("Block title.","js_composer")
+         "value" => __("Button",THEMENAME),
+         "description" => __("Block title.",THEMENAME)
         ),
 
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Btn More URL", "js_composer"),
+         "heading" => __("Btn More URL", THEMENAME),
          "param_name" => "custom_link",
          "value" => "",
-         "description" => __("URL Link.","js_composer")
+         "description" => __("URL Link.",THEMENAME)
         ),
 		
 		array(
             "type" => "dropdown",
-            "heading" => __("Target Link", "js_composer"),
+            "heading" => __("Target Link", THEMENAME),
             "param_name" => "custom_links_target",
-            "description" => __('Select where to open  custom links.', 'js_composer'),
+            "description" => __('Select where to open  custom links.', THEMENAME),
             'value' => $target_arr
         ),
 
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("Button Arrow", "js_composer"),
+		  "heading" => __("Button Arrow", THEMENAME),
 		  "param_name" => "btn_arr",
-		  "value" => array(__("No", "js_composer") => '', __("With Arrow", "js_composer") => "button-arrow"),
-		  "description" => __("Select arrow.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("With Arrow", THEMENAME) => "button-arrow"),
+		  "description" => __("Select arrow.", THEMENAME)
 		),
 		
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("Button Size", "js_composer"),
+		  "heading" => __("Button Size", THEMENAME),
 		  "param_name" => "btn_size",
-		   "description" => __("Select button size.", "js_composer"),
+		   "description" => __("Select button size.", THEMENAME),
 		  "value" => $btn_size
 		),
 		
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("Button Type", "js_composer"),
+		  "heading" => __("Button Type", THEMENAME),
 		  "param_name" => "btn_type",
-		  "value" => array(__("Normal", "js_composer") => '', __("Donate", "js_composer") => "donate"),
-		  "description" => __("Select button type.", "js_composer")
+		  "value" => array(__("Normal", THEMENAME) => '', __("Donate", THEMENAME) => "donate"),
+		  "description" => __("Select button type.", THEMENAME)
 		),
 		
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -1930,31 +1931,31 @@ vc_map( array(
    "base" => "vc_mylists",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Block of Custom List', 'js_composer'),
+	"description" => __('Block of Custom List', THEMENAME),
    "params" => array(
 
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("Type List", "js_composer"),
+		  "heading" => __("Type List", THEMENAME),
 		  "param_name" => "type_list",
-		  "value" => array(__("Arrow List", "js_composer") => "arrow-list", __("Check List", "js_composer") => "check-list", __("Star List", "js_composer") => "star-list", __("Plus List", "js_composer") => "plus-list", __("Finger List", "js_composer") => "finger-list", __("Ordered List", "js_composer") => "ordered-list"),
-		  "description" => __("Select Type.", "js_composer")
+		  "value" => array(__("Arrow List", THEMENAME) => "arrow-list", __("Check List", THEMENAME) => "check-list", __("Star List", THEMENAME) => "star-list", __("Plus List", THEMENAME) => "plus-list", __("Finger List", THEMENAME) => "finger-list", __("Ordered List", THEMENAME) => "ordered-list"),
+		  "description" => __("Select Type.", THEMENAME)
 		),
    
 		array(
             "type" => "exploded_textarea",
-            "heading" => __("Custom list", "js_composer"),
+            "heading" => __("Custom list", THEMENAME),
             "param_name" => "custom_links",
-            "description" => __('Enter text for each list. Divide text with linebreaks (,).', 'js_composer')
+            "description" => __('Enter text for each list. Divide text with linebreaks (,).', THEMENAME)
         ),
 		
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -1991,33 +1992,33 @@ vc_map( array(
    "base" => "vc_mybloquotes",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Block of Custom List', 'js_composer'),
+	"description" => __('Block of Custom List', THEMENAME),
    "params" => array(
 
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("Type Bloquote", "js_composer"),
+		  "heading" => __("Type Bloquote", THEMENAME),
 		  "param_name" => "type_list",
-		  "value" => array(__("Type1", "js_composer") => "", __("Type2", "js_composer") => "iconic-quote"),
-		  "description" => __("Select Type Bloquote.", "js_composer")
+		  "value" => array(__("Type1", THEMENAME) => "", __("Type2", THEMENAME) => "iconic-quote"),
+		  "description" => __("Select Type Bloquote.", THEMENAME)
 		),
    
 
 		array(  
 	        "type" => "textarea",
 			"holder" => "div",
-			"heading" => __("Text", "js_composer"),
+			"heading" => __("Text", THEMENAME),
 			"param_name" => "custom_text",
 			"value" => '',
-			"description" => __("Enter your content.", "js_composer")
+			"description" => __("Enter your content.", THEMENAME)
 		),    
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -2115,26 +2116,26 @@ vc_map( array(
    "base" => "vc_mytestimonials",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Block of Testimonials', 'js_composer'),
+	"description" => __('Block of Testimonials', THEMENAME),
    "params" => array(
 
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Number items", "js_composer"),
+         "heading" => __("Number items", THEMENAME),
          "param_name" => "num_items",
          "value" => "4",
-         "description" => __("Number of items in a carousel.","js_composer")
+         "description" => __("Number of items in a carousel.",THEMENAME)
         ),
    
         array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -2173,33 +2174,33 @@ vc_map( array(
    "base" => "vc_myalertbox",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Block of Custom Alert', 'js_composer'),
+	"description" => __('Block of Custom Alert', THEMENAME),
    "params" => array(
 
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("Type Alert", "js_composer"),
+		  "heading" => __("Type Alert", THEMENAME),
 		  "param_name" => "type_list",
-		  "value" => array(__("Warning", "js_composer") => "warning", __("Error", "js_composer") => "error", __("Success", "js_composer") => "success", __("Info", "js_composer") => "info"),
-		  "description" => __("Select Type Alert.", "js_composer")
+		  "value" => array(__("Warning", THEMENAME) => "warning", __("Error", THEMENAME) => "error", __("Success", THEMENAME) => "success", __("Info", THEMENAME) => "info"),
+		  "description" => __("Select Type Alert.", THEMENAME)
 		),
    
 
 		array(  
 	        "type" => "textarea",
 			"holder" => "div",
-			"heading" => __("Text", "js_composer"),
+			"heading" => __("Text", THEMENAME),
 			"param_name" => "custom_text",
 			"value" => '',
-			"description" => __("Enter your content.", "js_composer")
+			"description" => __("Enter your content.", THEMENAME)
 		),    
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -2246,24 +2247,24 @@ vc_map( array(
    "base" => "vc_mypagination",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Block of Custom Pagination', 'js_composer'),
+	"description" => __('Block of Custom Pagination', THEMENAME),
    "params" => array(
 
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("Type Pagination", "js_composer"),
+		  "heading" => __("Type Pagination", THEMENAME),
 		  "param_name" => "type_list",
-		  "value" => array(__("Numeric", "js_composer") => "numeric", __("Button", "js_composer") => "button"),
-		  "description" => __("Select Type Pagination.", "js_composer")
+		  "value" => array(__("Numeric", THEMENAME) => "numeric", __("Button", THEMENAME) => "button"),
+		  "description" => __("Select Type Pagination.", THEMENAME)
 		),
    
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -2299,33 +2300,33 @@ vc_map( array(
    "base" => "vc_mydropcaps",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Block of Custom Dropcaps', 'js_composer'),
+	"description" => __('Block of Custom Dropcaps', THEMENAME),
    "params" => array(
 
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("Type Dropcaps", "js_composer"),
+		  "heading" => __("Type Dropcaps", THEMENAME),
 		  "param_name" => "type_dropcaps",
-		  "value" => array(__("Normal", "js_composer") => "", __("Blue", "js_composer") => "blue", __("Squared", "js_composer") => "squared", __("Squared Blue", "js_composer") => "squared blue"),
-		  "description" => __("Select Type Dropcaps.", "js_composer")
+		  "value" => array(__("Normal", THEMENAME) => "", __("Blue", THEMENAME) => "blue", __("Squared", THEMENAME) => "squared", __("Squared Blue", THEMENAME) => "squared blue"),
+		  "description" => __("Select Type Dropcaps.", THEMENAME)
 		),
    
 
 		array(  
 	        "type" => "textarea",
 			"holder" => "div",
-			"heading" => __("Text", "js_composer"),
+			"heading" => __("Text", THEMENAME),
 			"param_name" => "custom_text",
 			"value" => '',
-			"description" => __("Enter your content.", "js_composer")
+			"description" => __("Enter your content.", THEMENAME)
 		),    
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top",THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -2360,43 +2361,43 @@ vc_map( array(
    "base" => "vc_mytooltip",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Block of Custom Tooltip', 'js_composer'),
+	"description" => __('Block of Custom Tooltip', THEMENAME),
    "params" => array(
 
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Title", "js_composer"),
+         "heading" => __("Title", THEMENAME),
          "param_name" => "title",
-         "value" => __("Tooltip","js_composer"),
-         "description" => __("Block title.","js_composer")
+         "value" => __("Tooltip",THEMENAME),
+         "description" => __("Block title.",THEMENAME)
         ),
 		
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("Type Tooltip", "js_composer"),
+		  "heading" => __("Type Tooltip", THEMENAME),
 		  "param_name" => "type_tooltip",
-		  "value" => array(__("Top", "js_composer") => "tooltip-ontop", __("Bottom", "js_composer") => "tooltip-onbottom", __("Left", "js_composer") => "tooltip-onleft", __("Right", "js_composer") => "tooltip-onright"),
-		  "description" => __("Select Type Tooltip.", "js_composer")
+		  "value" => array(__("Top", THEMENAME) => "tooltip-ontop", __("Bottom", THEMENAME) => "tooltip-onbottom", __("Left", THEMENAME) => "tooltip-onleft", __("Right", THEMENAME) => "tooltip-onright"),
+		  "description" => __("Select Type Tooltip.", THEMENAME)
 		),
    
 
 		array(  
 	        "type" => "textarea",
 			"holder" => "div",
-			"heading" => __("Text", "js_composer"),
+			"heading" => __("Text", THEMENAME),
 			"param_name" => "custom_text",
 			"value" => 'Text Tooltip',
-			"description" => __("Enter your content.", "js_composer")
+			"description" => __("Enter your content.", THEMENAME)
 		),    
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -2434,35 +2435,35 @@ vc_map( array(
    "base" => "vc_myaudio",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Block of Custom Audio', 'js_composer'),
+	"description" => __('Block of Custom Audio', THEMENAME),
    "params" => array(
 
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Title", "js_composer"),
+         "heading" => __("Title", THEMENAME),
          "param_name" => "title",
-         "value" => __("Audio","js_composer"),
-         "description" => __("Block title.","js_composer")
+         "value" => __("Audio",THEMENAME),
+         "description" => __("Block title.",THEMENAME)
         ),
 
 		array(  
 	        "type" => "textfield",
 			"holder" => "div",
 			 "class" => "",
-			"heading" => __("URL Audio", "js_composer"),
+			"heading" => __("URL Audio", THEMENAME),
 			"param_name" => "custom_text",
 			"value" => '',
-			"description" => __("Enter your URL Audio.", "js_composer")
+			"description" => __("Enter your URL Audio.", THEMENAME)
 		),    
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -2517,43 +2518,43 @@ vc_map( array(
    "base" => "vc_mylightbox",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Block of Custom LightBox', 'js_composer'),
+	"description" => __('Block of Custom LightBox', THEMENAME),
    "params" => array(
 
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Title", "js_composer"),
+         "heading" => __("Title", THEMENAME),
          "param_name" => "title",
-         "value" => __("LightBox","js_composer"),
-         "description" => __("Block title.","js_composer")
+         "value" => __("LightBox",THEMENAME),
+         "description" => __("Block title.",THEMENAME)
         ),
 
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("URL", "js_composer"),
+         "heading" => __("URL", THEMENAME),
          "param_name" => "title_url",
          "value" => "",
-         "description" => __("Block URL.","js_composer")
+         "description" => __("Block URL.",THEMENAME)
         ),
 		
 		array(
 			'type' => 'attach_image',
-			'heading' => __( 'Image', 'js_composer' ),
+			'heading' => __( 'Image', THEMENAME ),
 			'param_name' => 'image',
 			'value' => '',
-			'description' => __( 'Select image from media library.', 'js_composer' )
+			'description' => __( 'Select image from media library.', THEMENAME )
 		),
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -2583,25 +2584,25 @@ vc_map( array(
    "base" => "vc_toptitle",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Block of Custom Top Title', 'js_composer'),
+	"description" => __('Block of Custom Top Title', THEMENAME),
    "params" => array(
 
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Title", "js_composer"),
+         "heading" => __("Title", THEMENAME),
          "param_name" => "title",
-         "value" => __("Title","js_composer"),
-         "description" => __("Block title.","js_composer")
+         "value" => __("Title",THEMENAME),
+         "description" => __("Block title.",THEMENAME)
         ),
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )
@@ -2685,42 +2686,42 @@ vc_map( array(
    "base" => "vc_type_issues",
     "wrapper_class" => "clearfix",
 	"category" => __('Content', THEMENAME),
-	"description" => __('Custom block of Issues', 'js_composer'),
+	"description" => __('Custom block of Issues', THEMENAME),
    "params" => array(
 		
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Title", "js_composer"),
+         "heading" => __("Title", THEMENAME),
          "param_name" => "title",
          "value" => "",
-         "description" => __("Block title.","js_composer")
+         "description" => __("Block title.",THEMENAME)
         ),
 		array(
          "type" => "textfield",
          "holder" => "div",
          "class" => "",
-         "heading" => __("Number items", "js_composer"),
+         "heading" => __("Number items", THEMENAME),
          "param_name" => "number",
          "value" => "3",
-         "description" => __("Number items.","js_composer")
+         "description" => __("Number items.",THEMENAME)
         ),
 		array(
             "type" => "dropdown",
-            "heading" => __("Type", "js_composer"),
+            "heading" => __("Type", THEMENAME),
             "param_name" => "icon",
-            "description" => __('Select type.', 'js_composer'),
-            'value' => array(__("Icon", "js_composer") => 'true', __("Image", "js_composer") => "false")
+            "description" => __('Select type.', THEMENAME),
+            'value' => array(__("Icon", THEMENAME) => 'true', __("Image", THEMENAME) => "false")
         ),
 
 		array(
 		  "type" => "dropdown",
-		  "heading" => __("CSS Animation", "js_composer"),
+		  "heading" => __("CSS Animation", THEMENAME),
 		  "param_name" => "css_animation",
 		  "admin_label" => true,
-		  "value" => array(__("No", "js_composer") => '', __("Top to bottom", "js_composer") => "top-to-bottom", __("Bottom to top", "js_composer") => "bottom-to-top", __("Left to right", "js_composer") => "left-to-right", __("Right to left", "js_composer") => "right-to-left", __("Appear from center", "js_composer") => "appear"),
-		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", "js_composer")
+		  "value" => array(__("No", THEMENAME) => '', __("Top to bottom", THEMENAME) => "top-to-bottom", __("Bottom to top", THEMENAME) => "bottom-to-top", __("Left to right", THEMENAME) => "left-to-right", __("Right to left", THEMENAME) => "right-to-left", __("Appear from center", THEMENAME) => "appear"),
+		  "description" => __("Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.", THEMENAME)
 		)
 
    )

@@ -275,11 +275,11 @@ $team_member = array(
 				<div class="row animate-onscroll">
 					
 					<div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-left">
-						<?php  previous_post_link( '%link', 'Prev' );  ?>
+						<?php  previous_post_link( '%link', __( 'Prev', THEMENAME ) );  ?>
 					</div>
 					
 					<div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-right">
-						<?php  next_post_link( '%link', 'Next' ); ?>
+						<?php  next_post_link( '%link', __( 'Next', THEMENAME ) ); ?>
 					</div>
 					
 				</div>
@@ -339,7 +339,7 @@ $team_member = array(
 						'cancel_reply_link' => __( '<h4 style="margin-top:0; margin-bottom:5px;" >Cancel reply</h4>', THEMENAME ),  					
 						'comment_field' => $comment_field,
 						'comment_notes_before' => '',
-						'comment_notes_after'=>'<input type="submit" name="submit" value="Post Comment">'
+						'comment_notes_after'=>'<input type="submit" name="submit" value="'. __( 'Post Comment', THEMENAME ) .'">'
 						);
 						
 				comment_form($comments_args);

@@ -18,14 +18,14 @@ class Candidat_WC_Widget_Products extends WC_Widget {
 	 */
 	public function __construct() {
 		$this->widget_cssclass    = 'woocommerce widget_products';
-		$this->widget_description = __( 'Display a list of your products on your site.', 'woocommerce' );
+		$this->widget_description = __( 'Display a list of your products on your site.', THEMENAME );
 		$this->widget_id          = 'woocommerce_products';
-		$this->widget_name        = __( 'WooCommerce Products', 'woocommerce' );
+		$this->widget_name        = __( 'WooCommerce Products', THEMENAME );
 		$this->settings           = array(
 			'title'  => array(
 				'type'  => 'text',
-				'std'   => __( 'Products', 'woocommerce' ),
-				'label' => __( 'Title', 'woocommerce' )
+				'std'   => __( 'Products', THEMENAME ),
+				'label' => __( 'Title', THEMENAME )
 			),
 			'number' => array(
 				'type'  => 'number',
@@ -33,47 +33,47 @@ class Candidat_WC_Widget_Products extends WC_Widget {
 				'min'   => 1,
 				'max'   => '',
 				'std'   => 5,
-				'label' => __( 'Number of products to show', 'woocommerce' )
+				'label' => __( 'Number of products to show', THEMENAME )
 			),
 			'show' => array(
 				'type'  => 'select',
 				'std'   => '',
-				'label' => __( 'Show', 'woocommerce' ),
+				'label' => __( 'Show', THEMENAME ),
 				'options' => array(
-					''         => __( 'All Products', 'woocommerce' ),
-					'featured' => __( 'Featured Products', 'woocommerce' ),
-					'onsale'   => __( 'On-sale Products', 'woocommerce' ),
+					''         => __( 'All Products', THEMENAME ),
+					'featured' => __( 'Featured Products', THEMENAME ),
+					'onsale'   => __( 'On-sale Products', THEMENAME ),
 				)
 			),
 			'orderby' => array(
 				'type'  => 'select',
 				'std'   => 'date',
-				'label' => __( 'Order by', 'woocommerce' ),
+				'label' => __( 'Order by', THEMENAME ),
 				'options' => array(
-					'date'   => __( 'Date', 'woocommerce' ),
-					'price'  => __( 'Price', 'woocommerce' ),
-					'rand'   => __( 'Random', 'woocommerce' ),
-					'sales'  => __( 'Sales', 'woocommerce' ),
+					'date'   => __( 'Date', THEMENAME ),
+					'price'  => __( 'Price', THEMENAME ),
+					'rand'   => __( 'Random', THEMENAME ),
+					'sales'  => __( 'Sales', THEMENAME ),
 				)
 			),
 			'order' => array(
 				'type'  => 'select',
 				'std'   => 'desc',
-				'label' => _x( 'Order', 'Sorting order', 'woocommerce' ),
+				'label' => _x( 'Order', 'Sorting order', THEMENAME ),
 				'options' => array(
-					'asc'  => __( 'ASC', 'woocommerce' ),
-					'desc' => __( 'DESC', 'woocommerce' ),
+					'asc'  => __( 'ASC', THEMENAME ),
+					'desc' => __( 'DESC', THEMENAME ),
 				)
 			),
 			'hide_free' => array(
 				'type'  => 'checkbox',
 				'std'   => 0,
-				'label' => __( 'Hide free products', 'woocommerce' )
+				'label' => __( 'Hide free products', THEMENAME )
 			),
 			'show_hidden' => array(
 				'type'  => 'checkbox',
 				'std'   => 0,
-				'label' => __( 'Show hidden products', 'woocommerce' )
+				'label' => __( 'Show hidden products', THEMENAME )
 			)
 		);
 		parent::__construct();
