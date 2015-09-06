@@ -350,7 +350,7 @@ function vc_mylatest_news_func( $atts, $content = null ) {
 							
 	$output .=  '<p>'. candidat_the_excerpt_max_charlength_text(get_the_excerpt(), 32) .'</p>
 							
-							<a href="'. get_permalink($post_id) .'" class="button read-more-button big button-arrow">'. get_option('sense_more_text') .'</a>
+							<a href="'. get_permalink($post_id) .'" class="button read-more-button big button-arrow">Read More...</a>
 							
 						</div>
 						<!-- /Blog Post -->';
@@ -557,7 +557,7 @@ function vc_mylatest_post_func( $atts, $content = null ) { // New function param
 						
 	$output .=  '<p>'. candidat_the_excerpt_max_charlength_text(get_the_excerpt(), 12) .'</p>
 						
-						<a href="'. get_permalink($post_id) .'" class="button read-more-button big button-arrow">'. get_option('sense_more_text') .'</a>
+						<a href="'. get_permalink($post_id) .'" class="button read-more-button big button-arrow">'. 'Read more ...' .'</a>
 						
 					</div>
 					<!-- /Blog Post -->

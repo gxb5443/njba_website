@@ -104,9 +104,12 @@ jQuery(document).ready(function($) {
           var theModal = jQuery(this).data("target"),
               videoSRC = jQuery(this).attr("data-theVideo"),
               videoSRCauto = videoSRC + "?autoplay=1&rel=0";
-          jQuery(theModal + ' iframe').attr('src', videoSRCauto);
-          jQuery(theModal + ' button.close').click(function () {
-              jQuery(theModal + ' iframe').attr('src', videoSRC);
+			  	jQuery(theModal + ' iframe').attr('allowfullscreen', '');
+          		jQuery(theModal + ' iframe').attr('src', videoSRCauto);
+          		jQuery(theModal + ' button.close').click(function () {
+              	jQuery(theModal + ' iframe').attr('src', videoSRC);
+				
+
           });
           jQuery('.modal').click(function () {
               jQuery(theModal + ' iframe').attr('src', videoSRC);

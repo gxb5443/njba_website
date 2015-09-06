@@ -1310,9 +1310,9 @@ class WDSViewSlider {
         /* Pause videos.*/
         jQuery("#wds_slideshow_image_container_<?php echo $wds; ?>").find("iframe").each(function () {
           if (typeof jQuery(this)[0].contentWindow != "undefined") {
-            jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-            jQuery(this)[0].contentWindow.postMessage('{ "method": "pause" }', "*");
-            jQuery(this)[0].contentWindow.postMessage('pause', '*');
+            jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+            jQuery(this)[0].contentWindow.postMessage('{ "method": "stop" }', "*");
+            jQuery(this)[0].contentWindow.postMessage('stop', '*');
           }
         });
         /* Pause layer videos.*/

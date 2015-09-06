@@ -4,7 +4,7 @@ Donate link: http://ghozylab.com/donate
 Tags: admin, album, albums, best gallery, slider, best portfolio, facebook, fancybox, filterable gallery, foto, fotoalbum, fotogalerie, free gallery, free photo gallery, free slider, watermarks, galeri, galeria, galerie, galery, galleria, galleries, gallery, gallery image, gallery plugin, slideshow galleries, gallery slider, gallery wordpress, google, google maps, grid, grid gallery, image, image album, image gallery, image rotator, image slider, images, images gallery, lightbox, lightbox gallery, media library, media, media gallery, pictures, photo, photo album, photo albums, photo gallery, photoalbum, photographer, photography, photogallery, photos, photoset, picture, plugin gallery, portfolio, post, posts, responsive, responsive gallery, seo, shortcode gallery, slide, slideshow, twitter, video gallery, watermarking, website gallery, widget, wordpress gallery, wordpress seo, wp gallery, thumbnail gallery
 Requires at least: 3.3
 Tested up to: 4.3
-Stable tag: 1.3.45
+Stable tag: 1.3.47
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -263,6 +263,9 @@ But seriously, I just want to drink coffee for free, so help a developer out. Yo
 9. Google Maps and Google Street View
 
 == Changelog ==
+
+= 1.3.47 =
+* Fixed  : Youtube Fullscreen issue in DEMO page
 
 = 1.3.45 =
 * Fixed  : Youtube Fullscreen issue in HTML5 mode
@@ -696,5 +699,5 @@ There are no complicated instructions for using this gallery plugin because this
 
 == Upgrade Notice ==
 
-= 1.3.45 =
+= 1.3.47 =
 IMPORTANT! SECURITY BUGS FIX, PLEASE UPDATE NOW!

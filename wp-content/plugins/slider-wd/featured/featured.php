@@ -108,7 +108,13 @@ function spider_featured($current_plugin = '') {
       'text'     => 'WordPress random post plugin',
       'content'  => 'Spider Random Post is a small but very smart solution for your WordPress web site.',
       'href'     => 'https://web-dorado.com/products/wordpress-random-post.html'
-    )
+    ),
+    "faq_wd" => array(
+      'title'    => 'FAQ WD',
+      'text'     => 'WordPress FAQ plugin',
+      'content'  => 'Organize and publish your FAQs in an easy and elegant way using FAQ WD.',
+      'href'     => 'https://web-dorado.com/products/wordpress-faq-wd.html'
+    ),
   );
   ?>
   <div id="main_featured_plugins_page">
